@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var q=location.search;if(/[?&]tab=/.test(q))location.replace('./legal.html'+q+location.hash);})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A local-first app for finance, health and photos. Voice entry, natural-language queries and on-device AI. No account, no server, no tracking.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PigPigPlan">
+<meta property="og:title" content="PigPigPlan — money, health and photos, all on your device">
+<meta property="og:description" content="A local-first app for finance, health and photos. Voice entry, natural-language queries and on-device AI. No account, no server, no tracking.">
+<meta property="og:image" content="https://pigpigplans-stack.github.io/pigpigplan-legal/screenshots/zh-Hans/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="pig-icon.png">
+<title>PigPigPlan — money, health and photos, all on your device</title>
+<style>
+:root{--bg:#fff;--fg:#1c1c1e;--muted:#6b7280;--line:#e5e7eb;--brand:#0a84ff;--card:#f7f8fa;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0b0d;--fg:#e8e8ea;--muted:#9ca3af;--line:#2a2a2e;--card:#17171a;--brand:#3b9dff}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Hiragino Sans","Noto Sans CJK SC",sans-serif;background:var(--bg);color:var(--fg)}
+a{color:var(--brand)}
+h1,h2,h3{letter-spacing:-.01em}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:14px;min-height:60px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:19px;text-decoration:none;color:var(--fg);flex:0 0 auto}
+.brand img{height:28px;width:auto;display:block}
+.nav{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto;font-size:14px}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--fg)}
+.langsel{font:inherit;font-size:14px;font-weight:500;cursor:pointer;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;flex:0 0 auto}
+.langsel:empty{display:none}
+@media(max-width:760px){.nav{display:none}}
+.hero{padding:54px 0 10px;display:grid;grid-template-columns:1.12fr .88fr;gap:36px;align-items:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:34px;gap:24px}}
+.badge{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--card)}
+h1{font-size:38px;line-height:1.24;margin:14px 0 12px}
+@media(max-width:760px){h1{font-size:29px}}
+.lead{font-size:17px;color:var(--muted);margin:0 0 22px;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:12px 18px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn[aria-disabled="true"]{cursor:default}
+.soon{font-size:13px;color:var(--muted);margin:12px 0 0}
+.hero .shot{margin:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+section{padding:46px 0;border-top:1px solid var(--line);scroll-margin-top:70px}
+h2{font-size:26px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 22px;font-size:15px}
+.mod{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:26px;align-items:start;padding:22px 0;border-top:1px dashed var(--line)}
+.mod:first-of-type{border-top:0;padding-top:4px}
+@media(max-width:640px){.mod{grid-template-columns:1fr;gap:14px}}
+.mod h3{margin:0 0 8px;font-size:19px}
+.mod ul{margin:0;padding-left:20px}
+.mod li{margin:.35em 0}
+.shot{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:12px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.callout{background:var(--card);border-left:4px solid var(--brand);padding:14px 16px;border-radius:10px;margin:0}
+.callout strong{display:block;margin-bottom:4px}
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:560px){.plans{grid-template-columns:1fr}}
+.plan{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--card)}
+.plan h3{margin:0 0 6px;font-size:16px;color:var(--muted);font-weight:600}
+.price{font-size:26px;font-weight:700;margin:0 0 4px}
+.plan .note{font-size:13px;color:var(--muted);margin:0}
+.fine{font-size:13px;color:var(--muted);margin:16px 0 0}
+details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;background:var(--card)}
+summary{cursor:pointer;font-weight:600;list-style:none;padding-right:20px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:0;color:var(--muted);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--muted);font-size:15px}
+.support{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+@media(max-width:640px){.support{grid-template-columns:1fr}}
+.links{display:flex;flex-direction:column;gap:10px;font-size:15px}
+.links b{color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13px;margin-top:10px}
+footer .frow{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.badge.ai{color:var(--brand);border-color:var(--brand)}
+.aiband{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:16px;padding:24px 24px 18px;margin:26px 0 0;scroll-margin-top:70px}
+.aiband h2{margin:0 0 6px}
+.aiband ol{margin:16px 0 0;padding-left:22px}
+.aiband li{margin:.5em 0}
+.aiband .fine{margin-top:14px}
+.demo{margin:18px 0 0;border-top:1px dashed var(--line);padding-top:14px}
+.demo>b{display:block;font-size:14px;color:var(--muted);margin-bottom:10px}
+.ditem{margin:10px 0}
+.ditem .said{margin:0;font-weight:600}
+.ditem .got{margin:2px 0 0;color:var(--brand);font-size:14px}
+.rlist{margin:0;padding-left:22px}
+.rlist li{margin:.45em 0}
+.dev{margin:24px 0 0}
+.dev h3{font-size:15px;margin:0 0 10px;color:var(--muted);font-weight:600;letter-spacing:0}
+.strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+@media(max-width:640px){.strip{grid-template-columns:1fr}}
+.strip .shot{background:var(--card)}
+.strip .shot.wide{grid-column:span 2}
+@media(max-width:640px){.strip .shot.wide{grid-column:span 1}}
+.strip .shot img{display:block;width:100%;height:auto}
+.mod .goal{font-size:14px;font-weight:600;margin:0 0 8px}
+.modnote{font-size:13px;color:var(--muted);margin:16px 0 0}
+#about .aboutp{font-size:15px;color:var(--muted);margin:12px 0 0;line-height:1.75}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="./"><img src="pig-icon.png" alt="" onerror="this.remove()"><span>PigPigPlan</span></a>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <select id="langSel" class="langsel" aria-label="Language"></select>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<noscript>
+  <div class="wrap" style="padding-bottom:40px">
+    <h1>PigPigPlan</h1>
+    <p>A local-first app for finance, health and photos &mdash; no account, no server, no tracking.</p>
+    <p>Enable JavaScript for the full page, or read the <a href="./legal.html?tab=privacy">privacy policy</a>, the <a href="./legal.html?tab=guide">user guide</a> and the <a href="./legal.html?tab=terms">terms</a>.</p>
+  </div>
+</noscript>
+<script>
+/* 语言表：码 + 母语名（与 index.html 的 LANGS 完全一致；勿改大小写） */
+var LANGS=[["en","English"],["zh-Hans","简体中文"],["zh-Hant","繁體中文"],["ja","日本語"],["ko","한국어"],["de","Deutsch"],["fr","Français"],["es","Español"]];
+/* 上架后把 App Store 链接填进 STORE_URL（只改这一处，CTA 自动变成下载按钮） */
+var STORE_URL="";
+var MKT={};
+/* MKT-BEGIN */
+/* ============ EN ============ */
+MKT["en"]={
+  meta:{title:"PigPigPlan — money, health and photos, all on your device",
+        desc:"A local-first app for finance, health and photos. Voice entry, natural-language queries and on-device AI. No account, no server, no tracking."},
+  ui:{lang:"Language",soon:"Coming soon",notify:"Email me when it’s out",
+      nav:{features:"Features",privacy:"Privacy",pricing:"Pricing",faq:"FAQ",support:"Support",ai:"AI",reports:"Reports",screens:"Screenshots",about:"About"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"Money, health and photos — all on your device.",
+        sub:"Speak to record an expense, ask your own health data a question, and build photo albums by voice. One app: no account, no server, no tracking.",
+        cta:"Coming soon",
+        ctaNote:"Not on the App Store yet. Leave your email and we’ll tell you when it ships.",
+        aiNote:"Built-in AI · runs on your device"},
+  modulesTitle:"What it does",
+  modulesSub:"Three tools that share one encrypted database on your device.",
+  ai:{title:"Your phone’s chip does the listening.",
+    lead:"No cloud, no GPU farm. A 0.8B-parameter model ships inside the app and runs on the Apple silicon in your iPhone or iPad — the same chip that drives your games and video.",
+    points:[
+      "Bundled, not downloaded: the model is inside the app (4-bit, ~620 MB), so the very first answer needs no account, no setup and no connection.",
+      "AI in airplane mode: parsing your sentence, searching your albums and answering health questions all happen on the device — no request ever leaves it.",
+      "All that headroom, spent on you: today’s phone chips are fast enough to run a language model in your hand, so there is no queue, no call limit and no server bill to pass on."],
+    footnote:"Speech-to-text runs on the device whenever the system supports it; if it does not, Apple’s speech service handles the audio and only the recognised text is parsed locally."},
+  demo:{label:"Even sentences like these:",items:[
+    {said:"Bought a phone on the 12th last month for 5,999, 24 instalments, trade-in 300 off the last one",
+     got:"Expense 5,999 · 24 periods · 300 off the final one"},
+    {said:"Breakfast 12, lunch 32, taxi 18",
+     got:"3 entries waiting to be confirmed"},
+    {said:"Compare dining this month with last month",
+     got:"Comparison card · export to Excel"}]},
+  reports:{title:"Ask once, get the report.",
+    lead:"Queries are not just filters: trend, share, totals, budget gaps, period-to-period comparisons and Top-N come back as cards — ready to read, ready to export.",
+    points:[
+      "Trend · share · totals · budget gap · comparison · Top-N — asked in one sentence and delivered as cards, not a spreadsheet you have to count yourself.",
+      "One-tap Excel: charts on top, notes in the middle, data below, so the file still makes sense to someone else.",
+      "Subscription lists, instalment schedules and health trends export the same way, with the same fields you see in the app.",
+      "Everything is computed on the device; the exported file goes wherever you save it — your device or iCloud Drive."],
+    footnote:"Reports are built from the records and health summaries on your device. No cloud compute is involved."},
+  gallery:{title:"Real screenshots: portrait, landscape, big screen.",
+    lead:"The same on-device data, captured on iPhone Pro Max and iPhone Duo — both orientations plus the opened-up view. Not a single mockup.",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"Portrait"},{v:"landscape",label:"Landscape"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"Portrait"},{v:"landscape",label:"Landscape"},
+        {v:"open_portrait",label:"Open · Portrait"},{v:"open_landscape",label:"Open · Landscape"}]}]},
+  modules:[
+    {key:"finance",name:"Finance",goal:"Goal: record and query in everyday language, and turn the answer straight into a general-purpose report.",points:[
+      "Voice entry for both spending and income: say “lunch 32” or “YouTube channel subscription income 200”, and the amount, tag and date are filled in for you to confirm.",
+      "Ask in plain language — “how much did I spend on dining this month?” or “how much subscription income this year?” — and the answer is computed from your own records, on the device.",
+      "Subscriptions, instalments and trade-ins are tracked period by period, with an Excel export you start yourself.",
+      "Queries come back as reports: trend, share, totals, budget gap, period-to-period comparison and Top N as cards, one tap to Excel (charts on top, notes in the middle, data below)."
+    ]},
+    {key:"health",name:"Health",goal:"Goal: be the data companion for Apple Watch and Apple Health — read it well, and write records back.",points:[
+      "Reads only the categories you authorise (workouts, steps, stand hours, heart rate, HRV, respiratory rate, sleep, body temperature, blood oxygen, weight and more) and computes trends, extremes and averages on the device; fixed reports are one tap away.",
+      "Voice entry into Apple Health: workout type and calories burned, weight and body fat, body temperature, symptoms and more — written straight to the Health app once you confirm.",
+      "Ask your health data by voice: “how many runs have I done this year?”, “how many calories did I burn this month?” — answered locally.",
+      "Sleep depth analysis (when you sleep with an Apple Watch): temperature, heart rate, breathing and other signals from the same time window are lined up together, so the night is easier to read.",
+      "Stress analysis (when you wear an Apple Watch): stress levels with the specific date and time, for reference.",
+      "Storage: what you record lives in Apple Health (most of which comes from Apple Watch). The app’s encrypted database keeps only the statistics summaries and index used to speed up queries — never uploaded, never in a backup."
+    ]},
+    {key:"album",name:"Album",goal:"Goal: use the GPS and date already inside your photos to organise Apple Photos more easily.",points:[
+      "Find photos by time, place or type — or just say “photos from Seoul last year”. Browsing the system library reads Apple Photos directly; originals are not copied.",
+      "Build an album by voice: the grid narrows to the matches and selects them for you.",
+      "Photos added to an album inside the app keep one copy of the original (a single file, no thumbnail duplicates, and the original in Apple Photos is never modified); edits inside the app apply only to that copy.",
+      "Place names are looked up only through Apple Maps (coordinates only). GPS clustering, date grouping and search all run on the device; photos and locations are never uploaded."
+    ]}
+  ],
+  modulesNote:"All three share one encrypted database on your device: no server, no ads, no sign-up, and no third-party analytics SDK.",
+  about:{title:"About the makers",lead:"A small group of developers with years of experience building systems for international financial companies.",paragraphs:["We are a group of developers with many years of experience building systems for international financial companies. Our wish is to build software independently that genuinely improves people’s lives. From years of working on financial systems, we have learned something more directly than most: privacy is not one item on a feature list — it is the floor and the starting point of every experience. Without respect for user data, nothing else holds up.","That is why we made a few choices that were not easy. All user data is encrypted and processed only on your phone or iPad; everyday use needs no internet and no token. The only thing that can leave the device is the minimal encrypted backup you turn on yourself, and it is stored only in your own iCloud. We added on-device AI to improve how you enter and query data — not to trade data away for convenience.","We know this is hard to do offline, and not something you finish in a day. We are willing to keep at it, because we want to hand control of the data back to you. Whether the result deserves your trust is something only you can judge — and we are very glad to follow up on your feedback and improve."]},
+  privacy:{title:"Privacy by design",sub:"No account. No server. No tracking.",label:"Core commitment",
+    body:"PigPigPlan is a privacy-first, local-first finance & personal data app. All data you create (including health data) stays on your device and is never uploaded to any server; exports are always initiated by you. The built-in AI (voice cleanup, natural-language queries, health Q&A, semantic search) runs entirely on-device on a small model bundled with the app (~0.8B parameters) and needs no internet; speech-to-text is performed on-device whenever supported, and recognised text is parsed only locally and never uploaded to our servers."},
+  pricing:{title:"Pricing",sub:"One subscription unlocks everything. Cancel any time.",
+    plans:[{name:"Monthly",price:"$1.00 / month",note:"First week free for new subscribers"},
+           {name:"Yearly",price:"$10.00 / year",note:"No free trial"}],
+    fine:"Prices are listed in USD; the App Store charges the equivalent in your local currency, and the amount shown on the App Store product page is final. The subscription renews automatically unless cancelled at least 24 hours before the current period ends.",
+    cancel:"Cancel any time in Settings → Apple Account → Subscriptions. Cancelling stops the next renewal and the current period stays active until it ends."},
+  faq:{title:"FAQ",sub:"Short answers; the user guide has the details.",items:[{q:"Do you upload my data?",a:"No. Everything you create lives in an encrypted SQLCipher database on your device. There is no account and no server of ours. The only copies that leave the device go to your own iCloud Drive, and only when you export or when the automatic backup runs."},
+    {q:"Where is my health data stored?",a:"Two parts. ① What you record in the app (workouts and calories, weight and body fat, body temperature, symptoms and more) is written into Apple Health — and most of what Apple Health holds comes from Apple Watch. ② The app’s encrypted database keeps only daily/hourly summaries and the index used to speed up queries: raw samples are never uploaded and are excluded from backups. A few symptoms that Apple Health has no category for stay on this device only.Whether Apple Health itself syncs with iCloud is up to your system settings."},
+    {q:"Does the built-in AI need internet?",a:"No. The bundled model (about 0.8B parameters) runs on the device. Speech-to-text is performed on the device whenever the system supports it; if it does not, Apple’s speech service handles the audio and only the recognised text comes back, to be parsed locally."},
+    {q:"How do I move to a new iPhone?",a:"Automatic backups go to your own iCloud Drive (without photos and without health data), and you can also export a backup file by hand from Settings → Backup. Restoring merges — it never deletes."},
+    {q:"Do I need to register?",a:"No. There is no account system: open the app and the encrypted database is created locally."},
+    {q:"Are there ads or third-party analytics SDKs?",a:"No. There is no server, no advertising, no sign-up, and no third-party analytics, advertising or tracking SDK — only Apple’s own frameworks (HealthKit, Photos, WeatherKit, MapKit, StoreKit)."},
+    {q:"Which languages are supported?",a:"English, Simplified Chinese, Traditional Chinese, Japanese, Korean, German, French and Spanish."},
+    {q:"How does billing and cancellation work?",a:"The App Store charges your Apple Account. The monthly plan starts with one free week for new subscribers, then renews at $1.00 per month; the yearly plan is $10.00 per year. Cancel any time in Settings → Apple Account → Subscriptions."},
+    {q:"Where do weather and map data come from?",a:"Weather comes from Apple Weather; the traffic map, routes and travel times come from Apple Maps. Only the coordinates or the start and end points in use are sent — never your records, photos or health data."}]},
+  support:{title:"Support",body:"Questions, bug reports or a feature request? Write to us — we read every message.",
+    mail:"pigpigplan@outlook.com",linksTitle:"Legal & documents",
+    guide:"User guide",terms:"Terms & disclaimer",privacy:"Privacy policy"},
+  footer:{contact:"Contact: pigpigplan@outlook.com",
+    sourcesHtml:'Weather data from <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> and other providers. Apple Weather is a trademark of Apple Inc.',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ 简体中文 ============ */
+MKT["zh-Hans"]={
+  meta:{title:"PigPigPlan——记账、健康、相册，全部留在你的设备上",
+        desc:"本地优先的记账、健康与相册应用：语音录入、自然语言查询、端侧 AI。无账号、无服务器、无追踪。"},
+  ui:{lang:"语言",soon:"即将上线",notify:"上线时通知我",
+      nav:{features:"功能",privacy:"隐私",pricing:"价格",faq:"常见问题",support:"支持",ai:"AI",reports:"报表",screens:"截图",about:"关于"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"记账、健康、相册——全部留在你的设备上。",
+        sub:"说一句话就能记账，用自己的健康数据提问，用语音组建相册。一个 App：无账号、无服务器、无追踪。",
+        cta:"即将上线",
+        ctaNote:"还没上架 App Store。留下邮箱，上线时通知你。",
+        aiNote:"内置 AI · 本机运行"},
+  modulesTitle:"它能做什么",
+  modulesSub:"三个工具，共用一个本机加密数据库。",
+  ai:{title:"用手机的算力，听懂你的一句话。",
+    lead:"没有云端，也没有 GPU 机房。0.8B 参数的小模型随 App 一起装进来，直接跑在 iPhone / iPad 的 Apple 芯片上——和你打游戏、剪视频用的是同一颗芯片。",
+    points:[
+      "随 App 装好，不用下载：模型就在 App 内（4-bit 量化，约 620 MB），第一次提问不需要账号、不需要设置、也不需要联网。",
+      "飞行模式也能用：解析你说的话、搜相册、回答健康问题全部在本机完成，任何请求都不会离开设备。",
+      "把芯片的算力花在你身上：现在手机芯片足以在掌心跑一个语言模型，所以没有排队、没有调用次数上限，也没有要你分摊的服务器账单。"],
+    footnote:"语音转文字优先在本机完成；设备不支持时由 Apple 的语音服务处理音频，只把识别出的文字交回本机解析。"},
+  demo:{label:"就算一句话这么长也没问题：",items:[
+    {said:"上个月12号买手机5999，分24期，最后一期以旧换新抵300",
+     got:"支出 5999 · 24 期 · 末期抵扣 300"},
+    {said:"早饭12，午饭32，打车18",
+     got:"3 笔待确认"},
+    {said:"这个月和上个月餐饮对比",
+     got:"对比卡片 · 一键导出 Excel"}]},
+  reports:{title:"问一句，出一份报表。",
+    lead:"查询不只是筛选：趋势、占比、总计、预算差额、环比对比、Top N，都以卡片形式直接给到你——能读，也能导出。",
+    points:[
+      "趋势 · 占比 · 统计 · 预算差额 · 对比 · Top N——一句话问出来，结果就是卡片，不用自己对着一堆流水去数。",
+      "一键导出 Excel：图在上、说明在中、数据在下，转发给别人也看得懂。",
+      "订阅清单、分期还款计划、健康趋势同样能导出成表，字段与 App 里看到的一致。",
+      "全部在本机计算；导出的文件由你决定存到本机还是 iCloud Drive。"],
+    footnote:"报表由本机的账目与健康统计生成，不涉及任何云端计算。"},
+  gallery:{title:"真机截图：竖屏、横屏、大屏。",
+    lead:"同一份本机数据，分别在 iPhone Pro Max 和 iPhone Duo 上截图——横竖屏和展开状态都放上来，没有一张是渲染图。",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"竖屏"},{v:"landscape",label:"横屏"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"竖屏"},{v:"landscape",label:"横屏"},
+        {v:"open_portrait",label:"展开 · 竖屏"},{v:"open_landscape",label:"展开 · 横屏"}]}]},
+  modules:[
+    {key:"finance",name:"财务",goal:"目标：用日常用语记账和查询，并把结果直接做成通用报表。",points:[
+      "语音记账，支出和收入都行：说「午饭 32」「YouTube 频道订阅收入 200」，金额、标签、日期自动填好，确认即可。",
+      "用大白话提问——「这个月餐饮花了多少」「今年订阅收入一共多少」——答案由你自己的账本在本机算出。",
+      "订阅、分期、以旧换新按每一期跟踪，表格导出由你亲手发起。",
+      "查询直接出报表：趋势、占比、总计、预算差额、环比对比、Top N 都是卡片，一键导出 Excel（图在上、说明在中、数据在下）。"
+    ]},
+    {key:"health",name:"健康",goal:"目标：做 Apple Watch 与苹果健康的数据伴侣——读懂它，也能把记录写回去。",points:[
+      "只读取你授权的健康类别（运动、步数、站立、心率、HRV、呼吸、睡眠、体温、血氧、体重等），在本机算出趋势、极值与平均值；固定报表随点随看。",
+      "语音把资料补录进苹果健康：运动类型与消耗卡路里、体重与体脂、体温、症状等，确认后直接写入「健康」App。",
+      "用语音查询健康数据：「今年我跑了几次步」「这个月运动消耗了多少卡路里」，答案在本机算出来。",
+      "睡眠深度分析（戴 Apple Watch 睡觉时）：把同一时间段的体温、心率、呼吸等体征放到一起看，更直观地了解睡眠中的身体情况。",
+      "压力分析（戴 Apple Watch 时）：按具体日期与时间给出压力情况，供你参考。",
+      "存储：你录入的记录保存在苹果健康（苹果健康的主要数据来自 Apple Watch）；App 本机的加密库只存加速查询用的统计摘要与索引，不上传、不进备份。"
+    ]},
+    {key:"album",name:"相册",goal:"目标：借助照片自带的 GPS 和日期，把苹果相册整理得更顺手。",points:[
+      "按时间、地点或类型找照片——也可以直接说「去年首尔的照片」；浏览系统相册时直接读苹果相册，不复制原图。",
+      "语音建相册：网格自动收窄到命中项，并替你选好。",
+      "放进 App 自有相册的照片会存一份原图（每张只存一份，不生成缩略图副本，也不改动系统相册里的原图）；App 内编辑只作用于这份副本。",
+      "地名反查只用 Apple 地图接口（只发送坐标）；GPS 聚类、日期分组与检索全部在本机完成，照片与位置都不上传。"
+    ]}
+  ],
+  modulesNote:"三个模块共用同一份本机加密数据：没有服务器、没有广告、不需要注册，也不含任何第三方分析 SDK。",
+  about:{title:"关于设计者",lead:"一群有多年国际金融公司系统开发经验的开发者。",paragraphs:["我们是一群有多年国际金融公司系统开发经验的开发者。我们的愿望，是独立开发出真正能改善人们生活的软件。在长期金融系统开发中，我们比很多人更直接地认识到：隐私不是功能列表里的一项，而是一切体验的底线和起点。没有对用户数据的尊重，其他功能都无从谈起。","因此，在产品设计上，我们做了几个并不轻松的选择：用户数据全部加密，并且只在你的手机或 iPad 上处理；日常使用不联网、不需要 Token。唯一可能离开设备的，是你主动启用的最小化加密备份，而且只保存到你自己的 iCloud。我们加入本地 AI，是为了改善输入和查询体验，而不是把数据送出去换便利。","我们很清楚，在离线前提下实现这一切并不容易，也不是一天就能完成。但我们愿意坚持，因为我们希望把数据控制权真正交还给用户。最终效果是否值得信任，需要你来验证；我们也非常乐意跟进你的反馈，认真改进。"]},
+  privacy:{title:"隐私优先",sub:"无账号、无服务器、无追踪。",label:"核心承诺",
+    body:"PigPigPlan 是一款本地优先的记账与个人数据管理应用。你在 App 中产生的所有数据（包括健康数据）只存储在你的设备本地，绝不上传任何服务器；导出数据完全由你自主决定。内置 AI（语音整理、自然语言查询、健康问答、语义搜索）由随 App 打包的小模型（约 0.8B 参数）完全在本机运行，无需联网；语音转文字优先在本机完成，识别出的文字只在本机解析、不会上传到我们的服务器。"},
+  pricing:{title:"订阅价格",sub:"一次订阅解锁全部功能，随时可取消。",
+    plans:[{name:"月付",price:"$1.00 / 月",note:"新订阅者首周免费"},
+           {name:"年付",price:"$10.00 / 年",note:"无免费试用"}],
+    fine:"价格为美元标价，App Store 会按你所在地区以当地货币结算，最终金额以 App Store 商品页显示为准。订阅会自动续期，除非在当前周期结束前 24 小时取消。",
+    cancel:"随时在「设置 → Apple 账户 → 订阅」中取消。取消后不再续期，当前周期结束前仍可正常使用。"},
+  faq:{title:"常见问题",sub:"简短回答；操作细节见操作说明。",items:[{q:"数据会上传吗？",a:"不会。你产生的所有内容都存在本机的 SQLCipher 加密数据库里，没有账号、也没有我们的服务器。唯一会离开设备的是你自己 iCloud Drive 里的副本，且只在你主动导出或自动备份时产生。"},
+    {q:"健康数据存在哪？",a:"分两部分：① 你在 App 里录入的记录（运动与消耗卡路里、体重体脂、体温、症状等）会写进苹果健康，苹果健康里的主要数据来自 Apple Watch；② App 本机的加密数据库只存每天 / 每小时的统计摘要与索引，用来加速查询——原始采样不上传，也不包含在备份里。少数苹果健康没有对应分类的症状只保存在本机。苹果健康自身是否与 iCloud 同步，由你的系统设置决定。"},
+    {q:"内置 AI 需要联网吗？",a:"不需要。随 App 打包的小模型（约 0.8B 参数）在设备上运行。语音转文字优先在本机完成；设备不支持时由 Apple 的语音服务转写，只把识别出的文字交回本机解析。"},
+    {q:"换新 iPhone 怎么迁移？",a:"自动备份会写进你自己的 iCloud Drive（不含照片、不含健康数据），也可以在「设置 → 备份」里手动导出一份文件。恢复是合并，不会删除已有数据。"},
+    {q:"需要注册账号吗？",a:"不需要。没有账号体系，打开 App 即在本机创建加密数据库。"},
+    {q:"有广告或第三方统计 SDK 吗？",a:"没有。App 没有服务器、没有广告、不需要注册，也没有接入任何第三方分析、广告或追踪 SDK；只使用 Apple 的系统框架（HealthKit、Photos、WeatherKit、MapKit、StoreKit）。"},
+    {q:"支持哪些语言？",a:"界面提供英文、简体中文、繁体中文、日文、韩文、德文、法文、西班牙文。"},
+    {q:"怎么收费、怎么取消？",a:"由 App Store 从你的 Apple 账户扣款：月付新订阅者首周免费，之后 $1.00/月；年付 $10.00/年。随时可在「设置 → Apple 账户 → 订阅」中取消。"},
+    {q:"天气和地图数据从哪来？",a:"天气来自 Apple Weather；路况地图、路线与耗时来自 Apple Maps。只发送你正在使用的坐标或起点终点，不会发送你的账目、照片或健康数据。"}]},
+  support:{title:"支持与反馈",body:"问题、Bug 或功能建议，写信给我们——每一封都会看。",
+    mail:"pigpigplan@outlook.com",linksTitle:"法律与文档",
+    guide:"操作说明",terms:"使用条款与免责声明",privacy:"隐私政策"},
+  footer:{contact:"联系：pigpigplan@outlook.com",
+    sourcesHtml:'天气数据来自 <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> 及其他提供方。Apple Weather 是 Apple Inc. 的商标。',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ 繁體中文 ============ */
+MKT["zh-Hant"]={
+  meta:{title:"PigPigPlan——記帳、健康、相簿，全部留在你的裝置上",
+        desc:"本地優先的記帳、健康與相簿應用：語音輸入、自然語言查詢、裝置端 AI。無帳號、無伺服器、無追蹤。"},
+  ui:{lang:"語言",soon:"即將上線",notify:"上線時通知我",
+      nav:{features:"功能",privacy:"隱私",pricing:"價格",faq:"常見問題",support:"支援",ai:"AI",reports:"報表",screens:"截圖",about:"關於"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"記帳、健康、相簿——全部留在你的裝置上。",
+        sub:"說一句話就能記帳，用自己的健康資料提問，用語音組建相簿。一個 App：無帳號、無伺服器、無追蹤。",
+        cta:"即將上線",
+        ctaNote:"還沒上架 App Store。留下電子郵件，上線時通知你。",
+        aiNote:"內建 AI · 本機執行"},
+  modulesTitle:"它能做什麼",
+  modulesSub:"三個工具，共用一個本機加密資料庫。",
+  ai:{title:"用手機的算力，聽懂你的一句話。",
+    lead:"沒有雲端，也沒有 GPU 機房。0.8B 參數的小模型隨 App 一起裝進來，直接跑在 iPhone / iPad 的 Apple 晶片上——和你打遊戲、剪影片用的是同一顆晶片。",
+    points:[
+      "隨 App 裝好，不用下載：模型就在 App 內（4-bit 量化，約 620 MB），第一次提問不需要帳號、不需要設定、也不需要連網。",
+      "飛航模式也能用：解析你說的話、搜相簿、回答健康問題全部在本機完成，任何請求都不會離開裝置。",
+      "把晶片的算力花在你身上：現在手機晶片足以在掌心跑一個語言模型，所以沒有排隊、沒有呼叫次數上限，也沒有要你分攤的伺服器帳單。"],
+    footnote:"語音轉文字優先在本機完成；裝置不支援時由 Apple 的語音服務處理音訊，只把辨識出的文字交回本機解析。"},
+  demo:{label:"就算一句話這麼長也沒問題：",items:[
+    {said:"上個月12號買手機5999，分24期，最後一期以舊換新抵300",
+     got:"支出 5999 · 24 期 · 末期折抵 300"},
+    {said:"早餐12，午餐32，計程車18",
+     got:"3 筆待確認"},
+    {said:"這個月和上個月餐飲比較",
+     got:"比較卡片 · 一鍵匯出 Excel"}]},
+  reports:{title:"問一句，出一份報表。",
+    lead:"查詢不只是篩選：趨勢、佔比、總計、預算差額、環比比較、Top N，都以卡片形式直接給你——能讀，也能匯出。",
+    points:[
+      "趨勢 · 佔比 · 統計 · 預算差額 · 比較 · Top N——一句話問出來，結果就是卡片，不用自己對著一堆流水去數。",
+      "一鍵匯出 Excel：圖在上、說明在中、資料在下，轉寄給別人也看得懂。",
+      "訂閱清單、分期還款計畫、健康趨勢同樣能匯出成表，欄位與 App 裡看到的一致。",
+      "全部在本機計算；匯出的檔案由你決定存到本機還是 iCloud Drive。"],
+    footnote:"報表由本機的帳目與健康統計生成，不涉及任何雲端計算。"},
+  gallery:{title:"實機截圖：直向、橫向、大螢幕。",
+    lead:"同一份本機資料，分別在 iPhone Pro Max 和 iPhone Duo 上截圖——直向、橫向與展開狀態都放上來，沒有一張是渲染圖。",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"直向"},{v:"landscape",label:"橫向"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"直向"},{v:"landscape",label:"橫向"},
+        {v:"open_portrait",label:"展開 · 直向"},{v:"open_landscape",label:"展開 · 橫向"}]}]},
+  modules:[
+    {key:"finance",name:"財務",goal:"目標：用日常語言記帳與查詢，並把結果直接做成通用報表。",points:[
+      "語音記帳，支出和收入都行：說「午餐 32」「YouTube 頻道訂閱收入 200」，金額、標籤、日期自動填好，確認即可。",
+      "用白話提問——「這個月餐飲花了多少」「今年訂閱收入一共多少」——答案由你自己的帳本在本機算出。",
+      "訂閱、分期、以舊換新按期逐期追蹤，表格匯出由你親手發起。",
+      "查詢直接出報表：趨勢、佔比、總計、預算差額、環比比較、Top N 都是卡片，一鍵匯出 Excel（圖在上、說明在中、資料在下）。"
+    ]},
+    {key:"health",name:"健康",goal:"目標：做 Apple Watch 與蘋果健康的資料夥伴——讀懂它，也能把記錄寫回去。",points:[
+      "只讀取你授權的健康類別（運動、步數、站立、心率、HRV、呼吸、睡眠、體溫、血氧、體重等），在本機算出趨勢、極值與平均值；固定報表隨點隨看。",
+      "用語音把資料補錄進蘋果健康：運動類型與消耗卡路里、體重與體脂、體溫、症狀等，確認後直接寫入「健康」App。",
+      "用語音查詢健康資料：「今年我跑了幾次步」「這個月運動消耗了多少卡路里」，答案在本機算出來。",
+      "睡眠深度分析（戴 Apple Watch 睡覺時）：把同一時段的體溫、心率、呼吸等徵象放在一起看，更直觀地了解睡眠中的身體狀況。",
+      "壓力分析（戴 Apple Watch 時）：依具體日期與時間給出壓力情況，供你參考。",
+      "儲存：你輸入的記錄保存在蘋果健康（蘋果健康的主要資料來自 Apple Watch）；App 本機的加密資料庫只存加速查詢用的統計摘要與索引，不上傳、不進備份。"
+    ]},
+    {key:"album",name:"相簿",goal:"目標：藉助照片自帶的 GPS 與日期，把蘋果相簿整理得更順手。",points:[
+      "依時間、地點或類型找照片——也可以直接說「去年首爾的照片」；瀏覽系統相簿時直接讀蘋果相簿，不複製原圖。",
+      "語音建相簿：格狀清單自動收窄到符合項目，並替你選好。",
+      "放進 App 自有相簿的照片會存一份原圖（每張只存一份，不產生縮圖副本，也不改動系統相簿裡的原圖）；App 內編輯只作用在這份副本。",
+      "地名反查只用 Apple 地圖介面（僅傳送座標）；GPS 聚類、日期分組與檢索全部在本機完成，照片與位置都不上傳。"
+    ]}
+  ],
+  modulesNote:"三個模組共用同一份本機加密資料：沒有伺服器、沒有廣告、不需要註冊，也不含任何第三方分析 SDK。",
+  about:{title:"關於設計者",lead:"一群有多年國際金融公司系統開發經驗的開發者。",paragraphs:["我們是一群有多年國際金融公司系統開發經驗的開發者。我們的願望，是獨立開發出真正能改善人們生活的軟體。在長期金融系統開發中，我們比很多人更直接地認識到：隱私不是功能清單裡的一項，而是一切體驗的底線與起點。沒有對使用者資料的尊重，其他功能都無從談起。","因此，在產品設計上，我們做了幾個並不輕鬆的選擇：使用者資料全部加密，並且只在你的手機或 iPad 上處理；日常使用不連網、不需要 Token。唯一可能離開裝置的，是你主動啟用的最小化加密備份，而且只儲存到你自己的 iCloud。我們加入本機 AI，是為了改善輸入與查詢體驗，而不是把資料送出去換便利。","我們很清楚，在離線前提下實現這一切並不容易，也不是一天就能完成。但我們願意堅持，因為我們希望把資料控制權真正交還給使用者。最終效果是否值得信任，需要你來驗證；我們也非常樂意跟進你的回饋，認真改進。"]},
+  privacy:{title:"隱私優先",sub:"無帳號、無伺服器、無追蹤。",label:"核心承諾",
+    body:"PigPigPlan 是一款本地優先的記帳與個人資料管理 App。你在 App 中產生的所有資料（包含健康資料）只儲存在你的裝置本地，絕不上傳任何伺服器；匯出資料完全由你自主決定。內建 AI（語音整理、自然語言查詢、健康問答、語義搜尋）由隨 App 打包的小模型（約 0.8B 參數）完全在本機執行，無需連網；語音轉文字優先在本機完成，辨識出的文字只在本機解析、不會上傳到我們的伺服器。"},
+  pricing:{title:"訂閱價格",sub:"一次訂閱解鎖全部功能，隨時可取消。",
+    plans:[{name:"月付",price:"$1.00 / 月",note:"新訂閱者首週免費"},
+           {name:"年付",price:"$10.00 / 年",note:"無免費試用"}],
+    fine:"價格以美元標示，App Store 會依你所在地區以當地貨幣結算，最終金額以 App Store 商品頁顯示為準。訂閱會自動續訂，除非在目前週期結束前 24 小時取消。",
+    cancel:"隨時在「設定 → Apple 帳號 → 訂閱」中取消。取消後不再續訂，目前週期結束前仍可正常使用。"},
+  faq:{title:"常見問題",sub:"簡短回答；操作細節見操作說明。",items:[{q:"資料會上傳嗎？",a:"不會。你產生的所有內容都存在本機的 SQLCipher 加密資料庫裡，沒有帳號、也沒有我們的伺服器。唯一會離開裝置的是你自己 iCloud Drive 裡的副本，且只在你主動匯出或自動備份時產生。"},
+    {q:"健康資料存在哪？",a:"分兩部分：① 你在 App 裡輸入的記錄（運動與消耗卡路里、體重體脂、體溫、症狀等）會寫進蘋果健康，蘋果健康裡的主要資料來自 Apple Watch；② App 本機的加密資料庫只存每天 / 每小時的統計摘要與索引，用來加速查詢——原始取樣不上傳，也不包含在備份裡。少數蘋果健康沒有對應分類的症狀只儲存在本機。蘋果健康本身是否與 iCloud 同步，由你的系統設定決定。"},
+    {q:"內建 AI 需要連網嗎？",a:"不需要。隨 App 打包的小模型（約 0.8B 參數）在裝置上執行。語音轉文字優先在本機完成；裝置不支援時由 Apple 的語音服務轉寫，只把辨識出的文字交回本機解析。"},
+    {q:"換新 iPhone 怎麼移轉？",a:"自動備份會寫進你自己的 iCloud Drive（不含照片、不含健康資料），也可以在「設定 → 備份」裡手動匯出一份檔案。回復是合併，不會刪除既有資料。"},
+    {q:"需要註冊帳號嗎？",a:"不需要。沒有帳號系統，打開 App 即在本機建立加密資料庫。"},
+    {q:"有廣告或第三方統計 SDK 嗎？",a:"沒有。App 沒有伺服器、沒有廣告、不需要註冊，也沒有接入任何第三方分析、廣告或追蹤 SDK；只使用 Apple 的系統框架（HealthKit、Photos、WeatherKit、MapKit、StoreKit）。"},
+    {q:"支援哪些語言？",a:"介面提供英文、簡體中文、繁體中文、日文、韓文、德文、法文、西班牙文。"},
+    {q:"怎麼收費、怎麼取消？",a:"由 App Store 從你的 Apple 帳號扣款：月付新訂閱者首週免費，之後 $1.00/月；年付 $10.00/年。隨時可在「設定 → Apple 帳號 → 訂閱」中取消。"},
+    {q:"天氣和地圖資料從哪來？",a:"天氣來自 Apple Weather；路況地圖、路線與所需時間來自 Apple Maps。只發送你正在使用的座標或起訖點，不會發送你的帳目、照片或健康資料。"}]},
+  support:{title:"支援與回饋",body:"問題、Bug 或功能建議，寫信給我們——每一封都會看。",
+    mail:"pigpigplan@outlook.com",linksTitle:"法律與文件",
+    guide:"操作說明",terms:"使用條款與免責聲明",privacy:"隱私權政策"},
+  footer:{contact:"聯絡：pigpigplan@outlook.com",
+    sourcesHtml:'天氣資料來自 <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> 及其他提供方。Apple Weather 是 Apple Inc. 的商標。',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ 日本語 ============ */
+MKT["ja"]={
+  meta:{title:"PigPigPlan — 家計・健康・アルバム、すべて端末の中に",
+        desc:"ローカル優先の家計簿・健康・アルバムアプリ。音声入力、自然言語クエリ、端末内 AI。アカウント不要、サーバーなし、トラッキングなし。"},
+  ui:{lang:"言語",soon:"近日公開",notify:"公開時に通知を受け取る",
+      nav:{features:"機能",privacy:"プライバシー",pricing:"料金",faq:"よくある質問",support:"サポート",ai:"AI",reports:"レポート",screens:"画面",about:"開発者について"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"家計・健康・アルバム。すべて端末の中に。",
+        sub:"話すだけで記録、自分の健康データへの質問、音声でのアルバム作成。アプリは 1 つだけ。アカウント不要、サーバーなし、トラッキングなし。",
+        cta:"近日公開",
+        ctaNote:"App Store ではまだ公開されていません。メールを残していただければ、公開時にお知らせします。",
+        aiNote:"内蔵 AI · 端末内で動作"},
+  modulesTitle:"できること",
+  modulesSub:"3 つの機能が、端末内の 1 つの暗号化データベースを共有します。",
+  ai:{title:"スマホのチップが、あなたの一言を理解する。",
+    lead:"クラウドも GPU ファームもありません。0.8B パラメータのモデルをアプリに同梱し、iPhone / iPad の Apple シリコンで動かします。ゲームや動画を動かしているのと同じチップです。",
+    points:[
+      "同梱、ダウンロード不要：モデルはアプリ内にあります（4-bit、約 620 MB）。最初の質問からアカウントも設定も通信も不要です。",
+      "機内モードでも動く：文章の解析、アルバム検索、健康に関する回答はすべて端末内で完結し、リクエストは外部に出ません。",
+      "その余力を、あなたのために：現代のスマートフォンのチップは手のひらで言語モデルを動かせるほど速い。順番待ちも回数制限も、サーバー費用の転嫁もありません。"],
+    footnote:"音声の文字起こしは可能な限り端末内で実行します。非対応の場合は Apple の音声サービスが音声を処理し、認識されたテキストだけを端末内で解析します。"},
+  demo:{label:"こんなに長い一文でも大丈夫：",items:[
+    {said:"先月12日にスマホを5999で買って24回払い、最終回は下取りで300引き",
+     got:"支出 5999 · 24 回 · 最終回 300 引き"},
+    {said:"朝食12、昼食32、タクシー18",
+     got:"3 件が確認待ち"},
+    {said:"今月と先月の外食費を比較",
+     got:"比較カード · Excel に書き出し"}]},
+  reports:{title:"ひとことで、レポートが出る。",
+    lead:"検索は絞り込みだけではありません。推移・構成比・合計・予算との差・前期間との比較・Top N がカードで返り、そのまま書き出せます。",
+    points:[
+      "推移 · 構成比 · 集計 · 予算差分 · 比較 · Top N——ひとことで聞けばカードで返る。明細を自分で数える必要はありません。",
+      "ワンタップで Excel へ：グラフが上、説明が中、データが下。他の人に渡しても伝わります。",
+      "サブスク一覧、分割の返済予定表、健康の推移も同じ形式で書き出せ、項目はアプリ内の表示と一致します。",
+      "計算はすべて端末内。書き出したファイルの保存先は、端末でも iCloud Drive でも選べます。"],
+    footnote:"レポートは端末内の記録と健康統計から生成されます。クラウドの計算は使いません。"},
+  gallery:{title:"実機のスクリーンショット：縦・横・大画面。",
+    lead:"同じ端末内データを、iPhone Pro Max と iPhone Duo で撮影。縦向き・横向き・展開時の状態をそのまま掲載しています。レンダリング画像はありません。",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"縦向き"},{v:"landscape",label:"横向き"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"縦向き"},{v:"landscape",label:"横向き"},
+        {v:"open_portrait",label:"展開 · 縦向き"},{v:"open_landscape",label:"展開 · 横向き"}]}]},
+  modules:[
+    {key:"finance",name:"家計",goal:"目標：日常の言葉で記録と検索を行い、その結果をそのまま汎用のレポートにする。",points:[
+      "音声で記録。支出も収入も：「ランチ 32」「YouTube チャンネルのサブスク収入 200」と言えば、金額・タグ・日付が自動で入り、確認するだけ。",
+      "ふつうの言葉で質問——「今月の外食費はいくら？」「今年のサブスク収入は合計いくら？」——答えは自分の記録から端末内で計算します。",
+      "サブスク、分割払い、下取りを回ごとに追跡。Excel への書き出しはご自身の操作で行います。",
+      "検索結果はそのままレポートに：推移・構成比・合計・予算差分・前期間比較・Top N がカードで返り、ワンタップで Excel へ（グラフが上、説明が中、データが下）。"
+    ]},
+    {key:"health",name:"健康",goal:"目標：Apple Watch とヘルスケアのデータパートナーになること。読み解くだけでなく、記録を書き戻せるように。",points:[
+      "許可したカテゴリだけを読み取り（ワークアウト、歩数、スタンド時間、心拍、HRV、呼吸、睡眠、体温、血中酸素、体重など）、傾向・最大最小・平均を端末内で算出します。定例レポートはすぐ開けます。",
+      "音声でヘルスケアに追記：ワークアウトの種類と消費カロリー、体重と体脂肪、体温、症状など。確認すると「ヘルスケア」App に直接書き込まれます。",
+      "音声で健康データを検索：「今年何回走った？」「今月の運動の消費カロリーは？」——答えは端末内で計算します。",
+      "睡眠の深さ分析（Apple Watch を着けて寝たとき）：同じ時間帯の体温・心拍・呼吸などを並べて見られるので、睡眠中の体の状態がつかみやすくなります。",
+      "ストレス分析（Apple Watch を着けているとき）：具体的な日付と時刻ごとのストレス状況を参考として表示します。",
+      "保存：入力した記録はヘルスケアに保存されます（ヘルスケアの主なデータ源は Apple Watch）。アプリの暗号化データベースには検索を速くするための統計サマリーと索引だけを保持し、アップロードもバックアップへの同梱もしません。"
+    ]},
+    {key:"album",name:"アルバム",goal:"目標：写真が持つ GPS と日付を使って、写真 App の整理をもっと楽に。",points:[
+      "時間・場所・種類で写真を検索。「去年ソウルの写真」と話すだけでも探せます。システムのライブラリを見るときは写真 App を直接読み、元画像はコピーしません。",
+      "音声でアルバム作成：条件に合う写真までグリッドが絞られ、自動で選択されます。",
+      "アプリ内のアルバムに加えた写真は元画像を 1 枚だけ保存します（サムネイルの重複は作らず、写真 App 側の元画像は変更しません）。アプリ内の編集はこの複製にだけ適用されます。",
+      "地名の逆引きは Apple マップの API のみ（送るのは座標だけ）。GPS のまとめ、日付ごとの分類、検索はすべて端末内で完結し、写真も位置もアップロードしません。"
+    ]}
+  ],
+  modulesNote:"3 つの機能は端末内の同じ暗号化データを共有します。サーバーなし、広告なし、登録不要、第三者の解析 SDK もありません。",
+  about:{title:"開発者について",lead:"国際金融企業のシステム開発に長年携わってきた開発者たちです。",paragraphs:["私たちは、国際金融企業のシステム開発に長年携わってきた開発者の集まりです。私たちの願いは、人々の生活を本当に良くするソフトウェアを、自分たちの手で作ることです。長年の金融システム開発の現場で、私たちは多くの人より直接的に知りました。プライバシーは機能リストの一行ではなく、すべての体験の土台であり出発点だということです。利用者のデータへの敬意がなければ、他の機能も成り立ちません。","そのため、製品設計ではいくつか簡単ではない選択をしました。利用者のデータはすべて暗号化し、あなたの iPhone または iPad の中だけで処理します。日常の利用にネット接続もトークンも不要です。端末の外に出る可能性があるのは、あなた自身が有効にした最小限の暗号化バックアップだけで、しかもご自身の iCloud にのみ保存されます。端末内 AI を入れたのは、入力と検索の体験を良くするためであり、便利さと引き換えにデータを外へ出すためではありません。","オフラインを前提にこれを実現するのが容易でないこと、一日で終わる話でないことも分かっています。それでも続けたいのは、データの主導権を本当に利用者へ返したいからです。最終的に信頼に値するかは、あなたに確かめていただくほかありません。フィードバックには真摯に追随し、改善していきます。"]},
+  privacy:{title:"プライバシー最優先",sub:"アカウント不要、サーバーなし、トラッキングなし。",label:"基本方針",
+    body:"PigPigPlan はローカル優先の家計簿・個人データ管理アプリです。アプリ内で作成されたすべてのデータ（健康データを含む）はお客様のデバイス内にのみ保存され、サーバーにアップロードされることはありません。エクスポートは常にユーザー自身が開始・管理します。内蔵 AI（音声入力の整理、自然言語クエリ、健康 Q&A、意味検索）は、アプリに同梱された小型モデル（約 0.8B パラメータ）により端末内で動作し、ネット接続は不要です。音声の文字起こしは可能な限り端末内で行い、認識されたテキストは端末内でのみ処理され、当方のサーバーにはアップロードされません。"},
+  pricing:{title:"料金",sub:"1 つの購読ですべての機能を利用できます。いつでも解約可能。",
+    plans:[{name:"月額",price:"$1.00 / 月",note:"新規購読者は最初の 1 週間無料"},
+           {name:"年額",price:"$10.00 / 年",note:"無料トライアルなし"}],
+    fine:"価格は米ドル表示です。App Store ではお住まいの地域の通貨で請求され、最終的な金額は App Store の商品ページに表示される額となります。現在の期間終了の 24 時間前までに解約しない限り、自動的に更新されます。",
+    cancel:"「設定 → Apple アカウント → サブスクリプション」からいつでも解約できます。解約後は次回の更新が停止し、現在の期間が終わるまでは利用できます。"},
+  faq:{title:"よくある質問",sub:"簡潔な回答です。詳しい操作は操作ガイドをご覧ください。",items:[{q:"データはアップロードされますか？",a:"いいえ。作成した内容はすべて端末内の SQLCipher 暗号化データベースに保存されます。アカウントも当方のサーバーもありません。端末外に出るのはご自身の iCloud Drive 内のコピーのみで、書き出しや自動バックアップの実行時に限られます。"},
+    {q:"健康データはどこに保存されますか？",a:"2 つに分かれます。① アプリで入力した記録（ワークアウトと消費カロリー、体重・体脂肪、体温、症状など）はヘルスケアに書き込まれ、ヘルスケアの主なデータ源は Apple Watch です。② アプリの暗号化データベースには、検索を速くするための日別・時間別の統計サマリーと索引だけを保存します。生データはアップロードされず、バックアップにも含まれません。ヘルスケアに対応する分類がない一部の症状は端末内にのみ保存されます。ヘルスケア自体が iCloud と同期するかは、システム設定によります。"},
+    {q:"内蔵 AI はインターネットが必要ですか？",a:"いいえ。同梱の小型モデル（約 0.8B パラメータ）が端末内で動作します。音声の文字起こしは可能な限り端末内で行い、非対応の場合は Apple の音声サービスが音声を処理し、認識されたテキストだけが端末内の解析に渡されます。"},
+    {q:"新しい iPhone への移行は？",a:"自動バックアップはご自身の iCloud Drive に保存されます（写真と健康データは含みません）。「設定 → バックアップ」から手動で書き出すこともできます。復元は統合で、既存データは削除されません。"},
+    {q:"登録は必要ですか？",a:"不要です。アカウント制度はなく、アプリを開くと端末内に暗号化データベースが作成されます。"},
+    {q:"広告や第三者の解析 SDK はありますか？",a:"ありません。サーバーも広告も登録もなく、第三者の解析・広告・トラッキング SDK も組み込んでいません。使うのは Apple のシステムフレームワーク（HealthKit、Photos、WeatherKit、MapKit、StoreKit）だけです。"},
+    {q:"対応言語は？",a:"英語、簡体字中国語、繁体字中国語、日本語、韓国語、ドイツ語、フランス語、スペイン語に対応しています。"},
+    {q:"料金と解約はどうなりますか？",a:"App Store が Apple アカウントに請求します。月額は新規購読者の最初の 1 週間が無料で、その後 $1.00/月。年額は $10.00/年です。「設定 → Apple アカウント → サブスクリプション」からいつでも解約できます。"},
+    {q:"天気と地図のデータはどこから？",a:"天気は Apple Weather、交通マップ・ルート・所要時間は Apple Maps から取得します。送信されるのは使用中の座標または出発地・目的地のみで、記録・写真・健康データは送信されません。"}]},
+  support:{title:"サポート",body:"ご質問、不具合の報告、機能のご要望はメールでお寄せください。すべて目を通します。",
+    mail:"pigpigplan@outlook.com",linksTitle:"法務・ドキュメント",
+    guide:"操作ガイド",terms:"利用規約と免責事項",privacy:"プライバシーポリシー"},
+  footer:{contact:"お問い合わせ：pigpigplan@outlook.com",
+    sourcesHtml:'天気データは <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> およびその他の提供元から取得しています。Apple Weather は Apple Inc. の商標です。',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ 한국어 ============ */
+MKT["ko"]={
+  meta:{title:"PigPigPlan — 가계부·건강·앨범, 모두 기기 안에",
+        desc:"로컬 우선 가계부·건강·앨범 앱. 음성 입력, 자연어 쿼리, 기기 내 AI. 계정 없음, 서버 없음, 추적 없음."},
+  ui:{lang:"언어",soon:"출시 예정",notify:"출시되면 알려 주세요",
+      nav:{features:"기능",privacy:"개인정보",pricing:"요금",faq:"자주 묻는 질문",support:"지원",ai:"AI",reports:"리포트",screens:"화면",about:"만든 사람"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"가계부·건강·앨범, 모두 기기 안에.",
+        sub:"말로 기록하고, 내 건강 데이터에 질문하고, 음성으로 앨범을 만듭니다. 앱 하나로. 계정도, 서버도, 추적도 없습니다.",
+        cta:"출시 예정",
+        ctaNote:"아직 App Store에 없습니다. 이메일을 남겨 주시면 출시 시 알려 드립니다.",
+        aiNote:"내장 AI · 기기에서 실행"},
+  modulesTitle:"주요 기능",
+  modulesSub:"세 가지 도구가 기기 안의 하나의 암호화 데이터베이스를 함께 사용합니다.",
+  ai:{title:"스마트폰 칩이 당신의 한마디를 이해합니다.",
+    lead:"클라우드도, GPU 서버도 없습니다. 0.8B 파라미터 모델을 앱에 담아 iPhone / iPad의 Apple 실리콘에서 실행합니다. 게임과 영상을 돌리는 바로 그 칩입니다.",
+    points:[
+      "앱에 포함, 내려받기 없음: 모델이 앱 안에 있습니다(4-bit, 약 620 MB). 첫 질문부터 가입도, 설정도, 연결도 필요 없습니다.",
+      "비행기 모드에서도 동작: 문장 해석, 앨범 검색, 건강 질문 응답이 모두 기기 안에서 끝나며 요청이 밖으로 나가지 않습니다.",
+      "그 성능을 당신에게: 요즘 스마트폰 칩은 손안에서 언어 모델을 돌릴 만큼 빠릅니다. 대기열도, 호출 횟수 제한도, 서버 비용 부담도 없습니다."],
+    footnote:"음성-텍스트 변환은 가능하면 기기에서 수행합니다. 지원되지 않으면 Apple 음성 서비스가 오디오를 처리하고 인식된 텍스트만 기기에서 분석합니다."},
+  demo:{label:"이런 긴 문장도 그대로 됩니다:",items:[
+    {said:"지난달 12일에 휴대폰 5999에 사고 24개월 할부, 마지막 회차는 보상판매 300 차감",
+     got:"지출 5999 · 24회 · 마지막 회차 300 차감"},
+    {said:"아침 12, 점심 32, 택시 18",
+     got:"확인 대기 3건"},
+    {said:"이번 달과 지난달 외식비 비교",
+     got:"비교 카드 · Excel로 내보내기"}]},
+  reports:{title:"한 번 물으면, 리포트가 나옵니다.",
+    lead:"조회는 필터가 아닙니다. 추세·비중·합계·예산 차이·전월 비교·Top N이 카드로 돌아오고, 그대로 내보낼 수 있습니다.",
+    points:[
+      "추세 · 비중 · 집계 · 예산 차이 · 비교 · Top N — 한 문장으로 물으면 카드로 나옵니다. 내역을 직접 세지 않아도 됩니다.",
+      "원탭 Excel: 차트가 위, 설명이 가운데, 데이터가 아래. 다른 사람에게 보내도 이해됩니다.",
+      "구독 목록, 할부 상환 일정, 건강 추세도 같은 방식으로 내보내며, 항목은 앱에서 보는 것과 같습니다.",
+      "모든 계산은 기기에서 이루어지고, 내보낸 파일은 기기나 iCloud Drive 중 원하는 곳에 저장합니다."],
+    footnote:"리포트는 기기 안의 기록과 건강 통계로 만들어지며, 클라우드 연산은 사용하지 않습니다."},
+  gallery:{title:"실제 스크린샷: 세로, 가로, 큰 화면.",
+    lead:"같은 기기 내 데이터를 iPhone Pro Max와 iPhone Duo에서 촬영했습니다. 세로·가로·펼친 상태를 그대로 담았고, 렌더링 이미지는 없습니다.",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"세로"},{v:"landscape",label:"가로"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"세로"},{v:"landscape",label:"가로"},
+        {v:"open_portrait",label:"펼침 · 세로"},{v:"open_landscape",label:"펼침 · 가로"}]}]},
+  modules:[
+    {key:"finance",name:"가계부",goal:"목표: 일상적인 말로 기록하고 조회하며, 그 결과를 바로 일반적인 리포트로 만드는 것.",points:[
+      "음성 기록, 지출과 수입 모두: “점심 32”, “YouTube 채널 구독 수입 200”이라고 말하면 금액·태그·날짜가 자동으로 채워져 확인만 하면 됩니다.",
+      "평소 말로 질문하세요 — “이번 달 외식비 얼마 썼지?”, “올해 구독 수입은 모두 얼마지?” — 답은 내 기록에서 기기 안에서 계산됩니다.",
+      "구독, 할부, 보상판매를 회차별로 추적하고, Excel 내보내기는 직접 실행합니다.",
+      "조회 결과가 곧 리포트: 추세·비중·합계·예산 차이·전월 비교·Top N이 카드로 나오고, 원탭으로 Excel(차트 위, 설명 가운데, 데이터 아래)."
+    ]},
+    {key:"health",name:"건강",goal:"목표: Apple Watch와 Apple 건강의 데이터 파트너가 되는 것. 잘 읽고, 기록을 다시 써 넣을 수도 있게.",points:[
+      "권한을 허용한 카테고리만 읽고(운동, 걸음 수, 서 있는 시간, 심박, HRV, 호흡, 수면, 체온, 혈중 산소, 체중 등) 추세·최대·최소·평균을 기기에서 계산합니다. 고정 리포트는 바로 열 수 있습니다.",
+      "음성으로 Apple 건강에 기록 추가: 운동 종류와 소모 칼로리, 체중과 체지방, 체온, 증상 등. 확인하면 ‘건강’ 앱에 바로 기록됩니다.",
+      "음성으로 건강 데이터 질문: “올해 몇 번 뛰었지?”, “이번 달 운동 소모 칼로리는?” — 답은 기기 안에서 계산합니다.",
+      "수면 심층 분석(Apple Watch를 차고 잤을 때): 같은 시간대의 체온·심박·호흡 등을 함께 배치해 수면 중 몸 상태를 더 직관적으로 볼 수 있습니다.",
+      "스트레스 분석(Apple Watch를 착용할 때): 구체적인 날짜와 시간별 스트레스 상태를 참고용으로 보여 줍니다.",
+      "저장: 입력한 기록은 Apple 건강에 저장됩니다(Apple 건강의 주된 데이터 출처는 Apple Watch). 앱의 암호화 데이터베이스에는 조회를 빠르게 하기 위한 일별/시간별 통계 요약과 색인만 두며, 업로드하거나 백업에 포함하지 않습니다."
+    ]},
+    {key:"album",name:"앨범",goal:"목표: 사진에 담긴 GPS와 날짜를 활용해 Apple 사진 정리를 더 쉽게.",points:[
+      "시간·장소·유형으로 사진을 찾고, “작년 서울 사진”이라고 말해도 됩니다. 시스템 라이브러리를 볼 때는 Apple 사진을 직접 읽고 원본을 복사하지 않습니다.",
+      "음성으로 앨범 만들기: 조건에 맞는 항목까지 그리드가 좁혀지고 자동으로 선택됩니다.",
+      "앱 안의 앨범에 넣은 사진은 원본을 한 장만 저장합니다(썸네일 사본을 만들지 않고, Apple 사진의 원본은 건드리지 않습니다). 앱 안에서의 편집은 이 사본에만 적용됩니다.",
+      "지명 조회는 Apple 지도 API만 사용하며 좌표만 전송합니다. GPS 묶기, 날짜 분류, 검색은 모두 기기에서 이뤄지고 사진과 위치는 업로드하지 않습니다."
+    ]}
+  ],
+  modulesNote:"세 기능은 기기 안의 같은 암호화 데이터를 함께 씁니다. 서버 없음, 광고 없음, 가입 불필요, 타사 분석 SDK도 없습니다.",
+  about:{title:"만든 사람들",lead:"국제 금융회사 시스템을 오래 개발해 온 개발자들입니다.",paragraphs:["저희는 국제 금융회사의 시스템을 오랫동안 개발해 온 개발자 모임입니다. 바람은 사람들의 삶을 실제로 개선하는 소프트웨어를 직접 만드는 것입니다. 오랜 금융 시스템 개발 현장에서 저희는 많은 사람보다 더 직접적으로 알게 되었습니다. 개인정보 보호는 기능 목록의 한 항목이 아니라 모든 경험의 바닥이자 출발점이라는 점을요. 사용자 데이터에 대한 존중이 없으면 다른 기능도 성립하지 않습니다.","그래서 제품 설계에서 쉽지 않은 선택을 몇 가지 했습니다. 사용자 데이터는 전부 암호화하고, 오직 당신의 iPhone 또는 iPad 안에서만 처리합니다. 일상적인 사용에는 인터넷도 토큰도 필요 없습니다. 기기 밖으로 나갈 수 있는 것은 당신이 직접 켠 최소한의 암호화 백업뿐이며, 그것도 당신의 iCloud에만 저장됩니다. 기기 내 AI를 넣은 이유는 입력과 검색 경험을 개선하기 위해서이지, 편의를 위해 데이터를 내보내기 위해서가 아닙니다.","오프라인을 전제로 이 모든 것을 구현하는 일이 쉽지 않고 하루 만에 끝나지 않는다는 점도 잘 압니다. 그래도 계속하려는 이유는 데이터에 대한 통제권을 진짜로 사용자에게 돌려주고 싶기 때문입니다. 결과가 신뢰할 만한지는 당신이 판단할 몫이며, 저희는 피드백을 성실히 따라가며 개선하겠습니다."]},
+  privacy:{title:"개인정보 우선",sub:"계정 없음, 서버 없음, 추적 없음.",label:"핵심 약속",
+    body:"PigPigPlan은 로컬 우선(local-first) 방식의 가계부·개인 데이터 관리 앱입니다. 앱에서 생성하는 모든 데이터(건강 데이터 포함)는 사용자 기기에만 저장되며 어떤 서버에도 업로드되지 않습니다. 내보내기는 항상 사용자가 직접 시작합니다. 내장 AI(음성 입력 정리, 자연어 쿼리, 건강 Q&A, 의미 검색)는 앱에 포함된 소형 모델(약 0.8B 파라미터)로 기기에서 실행되며 인터넷 연결이 필요 없습니다. 음성-텍스트 변환은 가능하면 기기에서 수행하고, 인식된 텍스트는 기기에서만 처리되며 당사 서버로 업로드되지 않습니다."},
+  pricing:{title:"구독 요금",sub:"구독 하나로 모든 기능을 사용할 수 있고, 언제든 취소할 수 있습니다.",
+    plans:[{name:"월간",price:"$1.00 / 월",note:"신규 구독자는 첫 주 무료"},
+           {name:"연간",price:"$10.00 / 년",note:"무료 체험 없음"}],
+    fine:"가격은 미국 달러 기준입니다. App Store는 거주 지역 통화로 청구하며, 최종 금액은 App Store 제품 페이지에 표시된 금액입니다. 현재 기간 종료 24시간 전까지 취소하지 않으면 자동 갱신됩니다.",
+    cancel:"설정 → Apple 계정 → 구독에서 언제든 취소할 수 있습니다. 취소하면 다음 갱신이 중단되고 현재 기간이 끝날 때까지는 사용할 수 있습니다."},
+  faq:{title:"자주 묻는 질문",sub:"간단한 답변입니다. 자세한 사용법은 사용 안내를 참고하세요.",items:[{q:"데이터가 업로드되나요?",a:"아니요. 만든 모든 내용은 기기 안의 SQLCipher 암호화 데이터베이스에 저장됩니다. 계정도, 저희 서버도 없습니다. 기기 밖으로 나가는 것은 사용자가 직접 내보내거나 자동 백업이 실행될 때 본인 iCloud Drive에 생기는 사본뿐입니다."},
+    {q:"건강 데이터는 어디에 저장되나요?",a:"두 부분입니다. ① 앱에서 입력한 기록(운동과 소모 칼로리, 체중·체지방, 체온, 증상 등)은 Apple 건강에 기록되며, Apple 건강의 주된 데이터 출처는 Apple Watch입니다. ② 앱의 암호화 데이터베이스에는 조회를 빠르게 하기 위한 일별/시간별 통계 요약과 색인만 저장합니다. 원본 샘플은 업로드되지 않고 백업에도 포함되지 않습니다. Apple 건강에 해당 분류가 없는 일부 증상은 기기에만 저장됩니다.Apple 건강 자체가 iCloud와 동기화되는지는 시스템 설정에 따릅니다."},
+    {q:"내장 AI는 인터넷이 필요한가요?",a:"아니요. 앱에 포함된 소형 모델(약 0.8B 파라미터)이 기기에서 실행됩니다. 음성-텍스트 변환은 가능하면 기기에서 수행하고, 지원되지 않으면 Apple 음성 서비스가 오디오를 처리해 인식된 텍스트만 기기로 돌려보내 로컬에서 분석합니다."},
+    {q:"새 iPhone으로 어떻게 옮기나요?",a:"자동 백업은 본인 iCloud Drive에 저장됩니다(사진과 건강 데이터 제외). ‘설정 → 백업’에서 파일로 직접 내보낼 수도 있습니다. 복원은 병합이며 기존 데이터를 삭제하지 않습니다."},
+    {q:"가입이 필요한가요?",a:"필요 없습니다. 계정 체계가 없고, 앱을 열면 기기 안에 암호화 데이터베이스가 만들어집니다."},
+    {q:"광고나 타사 분석 SDK가 있나요?",a:"없습니다. 서버도, 광고도, 가입도 없으며 타사 분석·광고·추적 SDK를 넣지 않았습니다. 사용하는 것은 Apple 시스템 프레임워크(HealthKit, Photos, WeatherKit, MapKit, StoreKit)뿐입니다."},
+    {q:"어떤 언어를 지원하나요?",a:"영어, 중국어 간체, 중국어 번체, 일본어, 한국어, 독일어, 프랑스어, 스페인어를 지원합니다."},
+    {q:"요금과 취소는 어떻게 되나요?",a:"App Store가 Apple 계정으로 청구합니다. 월간은 신규 구독자 첫 주 무료 후 $1.00/월, 연간은 $10.00/년입니다. 설정 → Apple 계정 → 구독에서 언제든 취소할 수 있습니다."},
+    {q:"날씨와 지도 데이터는 어디서 오나요?",a:"날씨는 Apple Weather, 교통 지도·경로·소요 시간은 Apple Maps에서 가져옵니다. 사용 중인 좌표나 출발지·도착지만 전송되며, 기록·사진·건강 데이터는 전송되지 않습니다."}]},
+  support:{title:"지원",body:"질문, 버그 신고, 기능 제안은 메일로 보내 주세요. 모든 메시지를 읽습니다.",
+    mail:"pigpigplan@outlook.com",linksTitle:"법적 고지 및 문서",
+    guide:"사용 안내",terms:"이용약관 및 면책조항",privacy:"개인정보 처리방침"},
+  footer:{contact:"문의: pigpigplan@outlook.com",
+    sourcesHtml:'날씨 데이터는 <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> 및 기타 제공업체에서 제공됩니다. Apple Weather는 Apple Inc.의 상표입니다.',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ Deutsch ============ */
+MKT["de"]={
+  meta:{title:"PigPigPlan — Finanzen, Gesundheit, Fotos: alles auf Ihrem Gerät",
+        desc:"Eine Local-First-App für Finanzen, Gesundheit und Fotos. Spracheingabe, natürlichsprachige Abfragen, KI auf dem Gerät. Kein Konto, kein Server, kein Tracking."},
+  ui:{lang:"Sprache",soon:"Bald verfügbar",notify:"E-Mail, wenn es erscheint",
+      nav:{features:"Funktionen",privacy:"Datenschutz",pricing:"Preis",faq:"FAQ",support:"Support",ai:"KI",reports:"Berichte",screens:"Screenshots",about:"Über uns"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"Finanzen, Gesundheit, Fotos – alles bleibt auf Ihrem Gerät.",
+        sub:"Ausgaben per Sprache erfassen, eigene Gesundheitsdaten befragen, Alben per Stimme erstellen. Eine App: kein Konto, kein Server, kein Tracking.",
+        cta:"Bald verfügbar",
+        ctaNote:"Noch nicht im App Store. Hinterlassen Sie Ihre E-Mail – wir melden uns, sobald es erscheint.",
+        aiNote:"Integrierte KI · läuft auf dem Gerät"},
+  modulesTitle:"Was die App kann",
+  modulesSub:"Drei Werkzeuge, eine verschlüsselte Datenbank auf Ihrem Gerät.",
+  ai:{title:"Die Rechenleistung Ihres Telefons hört mit.",
+    lead:"Keine Cloud, keine GPU-Farm. Ein Modell mit 0,8 Mrd. Parametern ist in der App enthalten und läuft auf dem Apple Silicon Ihres iPhone oder iPad – derselbe Chip, der auch Ihre Spiele und Videos antreibt.",
+    points:[
+      "Mitgeliefert statt heruntergeladen: Das Modell liegt in der App (4-Bit, ca. 620 MB) – die erste Antwort braucht kein Konto, keine Einrichtung und keine Verbindung.",
+      "KI im Flugmodus: Satzanalyse, Albumsuche und Antworten zu Gesundheitsdaten passieren lokal – keine Anfrage verlässt das Gerät.",
+      "Die Reserve gehört Ihnen: Moderne Telefon-Chips sind schnell genug für ein Sprachmodell in der Hand – keine Warteschlange, kein Aufruflimit, keine Serverkosten."],
+    footnote:"Die Spracherkennung läuft möglichst on-device; falls nicht unterstützt, verarbeitet Apples Sprachdienst die Audiodaten, und nur der erkannte Text wird lokal ausgewertet."},
+  demo:{label:"Auch so ein langer Satz funktioniert:",items:[
+    {said:"Am 12. letzten Monat ein Handy für 5999 gekauft, 24 Raten, letzte Rate 300 Inzahlungnahme",
+     got:"Ausgabe 5999 · 24 Raten · 300 in der letzten Rate"},
+    {said:"Frühstück 12, Mittagessen 32, Taxi 18",
+     got:"3 Einträge zur Bestätigung"},
+    {said:"Essen diesen Monat mit dem letzten vergleichen",
+     got:"Vergleichskarte · Export nach Excel"}]},
+  reports:{title:"Einmal fragen, Bericht bekommen.",
+    lead:"Abfragen sind mehr als Filter: Trend, Anteil, Summen, Budgetlücke, Periodenvergleich und Top-N kommen als Karten zurück – lesbar und exportierbar.",
+    points:[
+      "Trend · Anteil · Summe · Budgetlücke · Vergleich · Top-N – in einem Satz gefragt und als Karte geliefert, statt einer Tabelle, die Sie selbst zählen müssen.",
+      "Excel mit einem Tipp: Diagramme oben, Erläuterung in der Mitte, Daten unten – auch für andere verständlich.",
+      "Abo-Listen, Ratenpläne und Gesundheitstrends lassen sich genauso exportieren, mit denselben Feldern wie in der App.",
+      "Alles wird auf dem Gerät berechnet; die exportierte Datei landet, wo Sie sie speichern – auf dem Gerät oder in iCloud Drive."],
+    footnote:"Berichte entstehen aus den Aufzeichnungen und Gesundheitsstatistiken auf Ihrem Gerät. Cloud-Rechenleistung ist nicht beteiligt."},
+  gallery:{title:"Echte Screenshots: Hochformat, Querformat, großes Display.",
+    lead:"Dieselben Gerätedaten, aufgenommen auf iPhone Pro Max und iPhone Duo – Hoch- und Querformat sowie aufgeklappt. Kein einziges Rendering.",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"Hochformat"},{v:"landscape",label:"Querformat"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"Hochformat"},{v:"landscape",label:"Querformat"},
+        {v:"open_portrait",label:"Aufgeklappt · Hochformat"},{v:"open_landscape",label:"Aufgeklappt · Querformat"}]}]},
+  modules:[
+    {key:"finance",name:"Finanzen",goal:"Ziel: mit Alltagssprache erfassen und abfragen – und das Ergebnis direkt zu einem allgemeinen Bericht machen.",points:[
+      "Spracheingabe für Ausgaben und Einnahmen: Sag „Mittagessen 32“ oder „YouTube-Kanal Abo-Einnahmen 200“ – Betrag, Tag und Datum werden gefüllt, du bestätigst nur.",
+      "Frag in normaler Sprache – „Wie viel habe ich diesen Monat für Essen ausgegeben?“, „Wie viel Abo-Einnahmen in diesem Jahr?“ – die Antwort wird aus deinen eigenen Daten auf dem Gerät berechnet.",
+      "Abos, Raten und Inzahlungnahmen werden pro Rate verfolgt; den Excel-Export startest du selbst.",
+      "Abfragen kommen als Bericht: Trend, Anteil, Summen, Budgetlücke, Periodenvergleich und Top-N als Karten, ein Tipp zu Excel (Diagramme oben, Hinweise in der Mitte, Daten unten)."
+    ]},
+    {key:"health",name:"Gesundheit",goal:"Ziel: Datenbegleiter für Apple Watch und Apple Health sein – gut lesen und Einträge zurückschreiben.",points:[
+      "Liest nur die freigegebenen Kategorien (Training, Schritte, Stehstunden, Herzfrequenz, HRV, Atmung, Schlaf, Körpertemperatur, Blutsauerstoff, Gewicht u. a.) und berechnet Trends, Extremwerte und Durchschnitte auf dem Gerät; feste Berichte sind einen Tipp entfernt.",
+      "Spracheingabe in Apple Health: Trainingsart und Kalorienverbrauch, Gewicht und Körperfett, Körpertemperatur, Symptome und mehr – nach dem Bestätigen direkt in die Health-App geschrieben.",
+      "Gesundheitsdaten per Sprache abfragen: „Wie oft bin ich dieses Jahr gelaufen?“, „Wie viele Kalorien habe ich diesen Monat verbrannt?“ – lokal berechnet.",
+      "Schlaftiefenanalyse (wenn du mit Apple Watch schläfst): Temperatur, Herzfrequenz, Atmung und weitere Werte aus demselben Zeitfenster stehen nebeneinander – so lässt sich die Nacht leichter lesen.",
+      "Stressanalyse (mit Apple Watch): Stresswerte mit konkretem Datum und Uhrzeit, als Orientierung.",
+      "Speicherung: Was du erfasst, liegt in Apple Health (der größte Teil davon kommt von der Apple Watch). Die verschlüsselte Datenbank der App hält nur die Statistik-Zusammenfassungen und den Index, der Abfragen beschleunigt – kein Upload, nicht in Sicherungen."
+    ]},
+    {key:"album",name:"Album",goal:"Ziel: mit GPS und Datum, die in den Fotos stecken, Apple Fotos leichter ordnen.",points:[
+      "Fotos nach Zeit, Ort oder Typ finden – oder einfach sagen: „Fotos aus Seoul vom letzten Jahr“. Beim Durchsehen der Systemmediathek werden Apple Fotos direkt gelesen, Originale nicht kopiert.",
+      "Album per Stimme erstellen: Das Raster grenzt sich auf die Treffer ein und wählt sie für dich aus.",
+      "Fotos, die in ein Album der App aufgenommen werden, behalten eine Kopie des Originals (eine Datei, keine doppelten Vorschaubilder, und das Original in Apple Fotos bleibt unverändert); Bearbeitungen in der App betreffen nur diese Kopie.",
+      "Ortsnamen werden ausschließlich über Apple Maps aufgelöst (nur Koordinaten). GPS-Gruppierung, Datumsgruppen und Suche laufen auf dem Gerät; Fotos und Standorte werden nie hochgeladen."
+    ]}
+  ],
+  modulesNote:"Alle drei teilen eine verschlüsselte Datenbank auf deinem Gerät: kein Server, keine Werbung, keine Anmeldung und kein Analyse-SDK von Drittanbietern.",
+  about:{title:"Wer dahintersteht",lead:"Ein Team von Entwicklern mit langjähriger Erfahrung in Systemen für internationale Finanzunternehmen.",paragraphs:["Wir sind eine Gruppe von Entwicklern, die viele Jahre Systeme für internationale Finanzunternehmen gebaut haben. Unser Wunsch ist, eigenständig Software zu entwickeln, die das Leben der Menschen tatsächlich verbessert. Aus der langen Arbeit an Finanzsystemen wissen wir direkter als viele andere: Datenschutz ist kein Punkt auf einer Funktionsliste, sondern die Grundlage und der Ausgangspunkt jeder Erfahrung. Ohne Respekt vor den Daten der Nutzer trägt nichts anderes.","Deshalb haben wir ein paar Entscheidungen getroffen, die nicht leicht waren: Alle Nutzerdaten werden verschlüsselt und ausschließlich auf deinem iPhone oder iPad verarbeitet; der Alltag braucht kein Internet und kein Token. Das Einzige, was das Gerät verlassen kann, ist die minimale verschlüsselte Sicherung, die du selbst einschaltest – und sie liegt nur in deiner eigenen iCloud. Die KI auf dem Gerät haben wir eingebaut, um Eingabe und Suche zu verbessern, nicht um Daten gegen Bequemlichkeit zu tauschen.","Uns ist klar, dass das offline nicht einfach ist und nicht an einem Tag fertig wird. Wir bleiben trotzdem dran, weil wir die Kontrolle über die Daten wirklich an dich zurückgeben wollen. Ob das Ergebnis Vertrauen verdient, kannst nur du beurteilen – und wir freuen uns sehr über dein Feedback und bessern nach."]},
+  privacy:{title:"Datenschutz von Anfang an",sub:"Kein Konto. Kein Server. Kein Tracking.",label:"Kernversprechen",
+    body:"PigPigPlan ist eine lokale, datenschutzorientierte App für Finanzen und persönliche Datenverwaltung. Alle in der App erstellten Daten (einschließlich Gesundheitsdaten) werden ausschließlich auf Ihrem Gerät gespeichert und niemals auf einen Server hochgeladen. Exporte lösen immer Sie selbst aus. Die integrierte KI (Spracheingabe, natürlichsprachige Abfragen, Gesundheits-Q&A, semantische Suche) läuft auf einem mitgelieferten kleinen Modell (ca. 0,8 Mrd. Parameter) vollständig auf Ihrem Gerät – ohne Internetverbindung. Die Spracherkennung erfolgt möglichst on-device; der erkannte Text wird ausschließlich on-device verarbeitet und nie auf unsere Server hochgeladen."},
+  pricing:{title:"Preis",sub:"Ein Abo schaltet alles frei. Jederzeit kündbar.",
+    plans:[{name:"Monatlich",price:"$1.00 / Monat",note:"Erste Woche für neue Abonnenten kostenlos"},
+           {name:"Jährlich",price:"$10.00 / Jahr",note:"Keine kostenlose Testphase"}],
+    fine:"Preise in USD; der App Store rechnet in Ihrer Landeswährung ab, maßgeblich ist der im App Store angezeigte Betrag. Das Abo verlängert sich automatisch, wenn es nicht mindestens 24 Stunden vor Ende der aktuellen Periode gekündigt wird.",
+    cancel:"Jederzeit kündbar unter Einstellungen → Apple Account → Abonnements. Die Kündigung stoppt die nächste Verlängerung; die aktuelle Periode läuft bis zum Ende weiter."},
+  faq:{title:"Häufige Fragen",sub:"Kurze Antworten; Details stehen in der Anleitung.",items:[{q:"Werden meine Daten hochgeladen?",a:"Nein. Alles, was Sie erstellen, liegt in einer verschlüsselten SQLCipher-Datenbank auf Ihrem Gerät. Es gibt kein Konto und keinen Server von uns. Das Gerät verlassen nur Kopien in Ihrem eigenen iCloud Drive – und nur, wenn Sie exportieren oder die automatische Sicherung läuft."},
+    {q:"Wo liegen meine Gesundheitsdaten?",a:"Zwei Teile. ① Was du in der App erfasst (Training und Kalorien, Gewicht und Körperfett, Körpertemperatur, Symptome und mehr), wird in Apple Health geschrieben – und der größte Teil dort kommt von der Apple Watch. ② Die verschlüsselte Datenbank der App hält nur Tages-/Stundenzusammenfassungen und den Index für schnellere Abfragen: Rohdaten werden nie hochgeladen und sind von Sicherungen ausgeschlossen. Einige Symptome ohne passende Kategorie in Apple Health bleiben nur auf diesem Gerät.Ob Apple Health selbst mit iCloud synchronisiert, hängt von deinen Systemeinstellungen ab."},
+    {q:"Braucht die integrierte KI Internet?",a:"Nein. Das mitgelieferte Modell (ca. 0,8 Mrd. Parameter) läuft auf dem Gerät. Die Spracherkennung erfolgt möglichst on-device; falls nicht unterstützt, verarbeitet Apples Sprachdienst die Audiodaten, und nur der erkannte Text kommt zurück und wird lokal ausgewertet."},
+    {q:"Wie wechsle ich auf ein neues iPhone?",a:"Automatische Sicherungen gehen in Ihr eigenes iCloud Drive (ohne Fotos und ohne Gesundheitsdaten). Unter Einstellungen → Backup können Sie zusätzlich eine Datei exportieren. Wiederherstellen führt zusammen und löscht nie."},
+    {q:"Muss ich mich registrieren?",a:"Nein. Es gibt kein Kontosystem: App öffnen, die verschlüsselte Datenbank wird lokal angelegt."},
+    {q:"Gibt es Werbung oder Analyse-SDKs von Drittanbietern?",a:"Nein. Es gibt keinen Server, keine Werbung, keine Anmeldung und kein Analyse-, Werbe- oder Tracking-SDK von Drittanbietern – nur Apples eigene Frameworks (HealthKit, Photos, WeatherKit, MapKit, StoreKit)."},
+    {q:"Welche Sprachen werden unterstützt?",a:"Englisch, vereinfachtes Chinesisch, traditionelles Chinesisch, Japanisch, Koreanisch, Deutsch, Französisch und Spanisch."},
+    {q:"Wie funktionieren Abrechnung und Kündigung?",a:"Der App Store belastet Ihren Apple Account. Das Monatsabo startet für neue Abonnenten mit einer kostenlosen Woche und verlängert sich dann für $1.00 pro Monat; das Jahresabo kostet $10.00 pro Jahr. Kündbar jederzeit unter Einstellungen → Apple Account → Abonnements."},
+    {q:"Woher kommen Wetter- und Kartendaten?",a:"Wetter von Apple Weather; Verkehrskarte, Routen und Fahrzeiten von Apple Maps. Gesendet werden nur die verwendeten Koordinaten bzw. Start und Ziel – nie Ihre Daten, Fotos oder Gesundheitsdaten."}]},
+  support:{title:"Support",body:"Fragen, Fehlerberichte oder Funktionswünsche? Schreiben Sie uns – wir lesen jede Nachricht.",
+    mail:"pigpigplan@outlook.com",linksTitle:"Rechtliches & Dokumente",
+    guide:"Anleitung",terms:"Nutzungsbedingungen",privacy:"Datenschutz"},
+  footer:{contact:"Kontakt: pigpigplan@outlook.com",
+    sourcesHtml:'Wetterdaten von <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> und weiteren Anbietern. Apple Weather ist eine Marke von Apple Inc.',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ Français ============ */
+MKT["fr"]={
+  meta:{title:"PigPigPlan — finances, santé, photos : tout reste sur votre appareil",
+        desc:"Une app local-first pour les finances, la santé et les photos. Saisie vocale, requêtes en langage naturel, IA sur l’appareil. Sans compte, sans serveur, sans pistage."},
+  ui:{lang:"Langue",soon:"Bientôt disponible",notify:"Prévenez-moi au lancement",
+      nav:{features:"Fonctionnalités",privacy:"Confidentialité",pricing:"Tarifs",faq:"FAQ",support:"Assistance",ai:"IA",reports:"Rapports",screens:"Captures",about:"À propos"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"Finances, santé, photos – tout reste sur votre appareil.",
+        sub:"Enregistrez une dépense à la voix, interrogez vos données de santé, créez des albums par commande vocale. Une app : sans compte, sans serveur, sans pistage.",
+        cta:"Bientôt disponible",
+        ctaNote:"Pas encore sur l’App Store. Laissez votre e-mail, nous vous préviendrons au lancement.",
+        aiNote:"IA intégrée · sur l’appareil"},
+  modulesTitle:"Ce que fait l’app",
+  modulesSub:"Trois outils qui partagent une base chiffrée sur votre appareil.",
+  ai:{title:"La puissance de votre téléphone, à l’écoute de vos phrases.",
+    lead:"Pas de cloud, pas de ferme de GPU. Un modèle de 0,8 Md de paramètres est embarqué dans l’app et s’exécute sur la puce Apple de votre iPhone ou iPad — celle qui fait tourner vos jeux et vos vidéos.",
+    points:[
+      "Embarqué, pas téléchargé : le modèle est dans l’app (4 bits, ~620 Mo) ; la première réponse ne demande ni compte, ni réglage, ni connexion.",
+      "IA en mode avion : analyser une phrase, chercher dans vos albums et répondre sur vos données de santé se fait localement — aucune requête ne quitte l’appareil.",
+      "Toute cette puissance pour vous : les puces mobiles actuelles font tourner un modèle de langage dans la main — sans file d’attente, sans quota d’appels, sans facture de serveur."],
+    footnote:"La transcription vocale est faite sur l’appareil lorsque le système le permet ; sinon, le service vocal d’Apple traite l’audio et seul le texte reconnu est analysé localement."},
+  demo:{label:"Même une phrase aussi longue :",items:[
+    {said:"Téléphone acheté 5999 le 12 du mois dernier, 24 mensualités, 300 de reprise sur la dernière",
+     got:"Dépense 5999 · 24 échéances · 300 sur la dernière"},
+    {said:"Petit-déj 12, déjeuner 32, taxi 18",
+     got:"3 écritures à confirmer"},
+    {said:"Comparer les restaurants ce mois-ci et le mois dernier",
+     got:"Carte de comparaison · export Excel"}]},
+  reports:{title:"Une question, un rapport.",
+    lead:"Les requêtes ne sont pas de simples filtres : tendance, répartition, totaux, écart au budget, comparaison entre périodes et Top N reviennent sous forme de cartes — lisibles et exportables.",
+    points:[
+      "Tendance · répartition · total · écart au budget · comparaison · Top N — demandés en une phrase et rendus en cartes, sans compter vos lignes à la main.",
+      "Excel en un geste : graphiques en haut, explications au milieu, données en bas — compréhensible par un tiers.",
+      "Listes d’abonnements, échéanciers et tendances de santé s’exportent de la même façon, avec les mêmes champs que dans l’app.",
+      "Tout est calculé sur l’appareil ; le fichier exporté va là où vous l’enregistrez — appareil ou iCloud Drive."],
+    footnote:"Les rapports sont générés à partir de vos écritures et statistiques de santé sur l’appareil. Aucun calcul dans le cloud."},
+  gallery:{title:"Captures réelles : portrait, paysage, grand écran.",
+    lead:"Les mêmes données locales, capturées sur iPhone Pro Max et iPhone Duo — portrait, paysage et vue ouverte. Aucune capture n’est un rendu.",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"Portrait"},{v:"landscape",label:"Paysage"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"Portrait"},{v:"landscape",label:"Paysage"},
+        {v:"open_portrait",label:"Ouvert · Portrait"},{v:"open_landscape",label:"Ouvert · Paysage"}]}]},
+  modules:[
+    {key:"finance",name:"Finances",goal:"Objectif : enregistrer et interroger en langage courant, puis transformer la réponse en rapport d’usage général.",points:[
+      "Saisie vocale, dépenses et revenus : dites « déjeuner 32 » ou « revenus d’abonnement YouTube 200 », le montant, l’étiquette et la date sont remplis, il ne reste qu’à confirmer.",
+      "Posez la question simplement — « combien ai-je dépensé en restaurants ce mois-ci ? », « combien de revenus d’abonnements cette année ? » — la réponse est calculée sur l’appareil à partir de vos propres écritures.",
+      "Abonnements, échéances et reprises sont suivis échéance par échéance, et l’export Excel est lancé par vous.",
+      "Les requêtes deviennent des rapports : tendance, part, totaux, écart au budget, comparaison de périodes et Top N en cartes, un tap pour Excel (graphiques en haut, notes au milieu, données en bas)."
+    ]},
+    {key:"health",name:"Santé",goal:"Objectif : être le compagnon de données d’Apple Watch et d’Apple Santé — bien lire, et réécrire des enregistrements.",points:[
+      "Ne lit que les catégories autorisées (activité, pas, heures debout, fréquence cardiaque, VFC, respiration, sommeil, température corporelle, oxygène sanguin, poids, etc.) et calcule tendances, extrêmes et moyennes sur l’appareil ; les rapports fixes sont à un tap.",
+      "Saisie vocale vers Apple Santé : type d’activité et calories brûlées, poids et masse grasse, température corporelle, symptômes, etc. — écrits dans l’app Santé dès que vous confirmez.",
+      "Interrogez vos données de santé à la voix : « combien de fois ai-je couru cette année ? », « combien de calories brûlées ce mois-ci ? » — réponse calculée localement.",
+      "Analyse de la profondeur du sommeil (si vous dormez avec une Apple Watch) : température, fréquence cardiaque, respiration et autres signaux de la même plage horaire sont réunis, pour lire la nuit plus facilement.",
+      "Analyse du stress (avec une Apple Watch) : niveau de stress avec la date et l’heure précises, à titre indicatif.",
+      "Stockage : ce que vous saisissez vit dans Apple Santé (dont l’essentiel provient de l’Apple Watch). La base chiffrée de l’app ne garde que les résumés statistiques et l’index qui accélèrent les requêtes — jamais envoyés, jamais dans une sauvegarde."
+    ]},
+    {key:"album",name:"Album",goal:"Objectif : utiliser le GPS et la date déjà présents dans les photos pour mieux organiser Photos.",points:[
+      "Trouvez des photos par date, lieu ou type — ou dites simplement « les photos de Séoul l’an dernier ». Parcourir la photothèque système lit Photos directement ; les originaux ne sont pas copiés.",
+      "Créer un album à la voix : la grille se resserre sur les résultats et les sélectionne pour vous.",
+      "Les photos ajoutées à un album de l’app gardent une copie de l’original (un seul fichier, pas de doublons de vignettes, et l’original dans Photos n’est jamais modifié) ; les retouches dans l’app ne touchent que cette copie.",
+      "Les noms de lieux ne sont résolus que via Apple Maps (coordonnées seules). Regroupement GPS, tri par date et recherche se font sur l’appareil ; photos et positions ne sont jamais envoyées."
+    ]}
+  ],
+  modulesNote:"Les trois partagent une seule base chiffrée sur votre appareil : sans serveur, sans publicité, sans inscription, et sans SDK d’analyse tiers.",
+  about:{title:"Qui nous sommes",lead:"Une équipe de développeurs qui construit depuis des années des systèmes pour des sociétés financières internationales.",paragraphs:["Nous sommes un groupe de développeurs qui a passé des années à construire des systèmes pour des sociétés financières internationales. Notre souhait est de créer de façon indépendante des logiciels qui améliorent réellement la vie des gens. À force de travailler sur des systèmes financiers, nous avons compris plus directement que beaucoup d’autres : la confidentialité n’est pas une ligne dans une liste de fonctionnalités, c’est le socle et le point de départ de toute expérience. Sans respect des données des utilisateurs, rien d’autre ne tient.","C’est pourquoi nous avons fait quelques choix qui n’étaient pas faciles. Toutes les données sont chiffrées et traitées uniquement sur votre iPhone ou iPad ; l’usage quotidien ne demande ni Internet ni jeton. La seule chose qui peut quitter l’appareil est la sauvegarde chiffrée minimale que vous activez vous-même, et elle reste dans votre propre iCloud. Nous avons ajouté une IA embarquée pour améliorer la saisie et la recherche, pas pour échanger des données contre du confort.","Nous savons que faire tout cela hors ligne n’est pas simple et ne se termine pas en un jour. Nous continuons parce que nous voulons réellement rendre le contrôle des données à l’utilisateur. Savoir si le résultat mérite votre confiance ne dépend que de vous — et nous serons très heureux de suivre vos retours et d’améliorer."]},
+  privacy:{title:"Confidentialité dès la conception",sub:"Sans compte. Sans serveur. Sans pistage.",label:"Engagement principal",
+    body:"PigPigPlan est une application locale et respectueuse de la vie privée pour la gestion des finances et des données personnelles. Toutes les données que vous créez dans l’application (y compris les données de santé) sont stockées uniquement sur votre appareil, ne sont jamais téléchargées sur un serveur, et l’exportation est toujours initiée et contrôlée par vous. L’IA intégrée (saisie vocale, requêtes en langage naturel, Q&R santé, recherche sémantique) s’exécute sur un petit modèle embarqué (environ 0,8 Md de paramètres), sans connexion Internet ; la transcription vocale est effectuée sur l’appareil lorsque c’est possible, et le texte reconnu n’est jamais envoyé à nos serveurs."},
+  pricing:{title:"Tarifs",sub:"Un abonnement débloque tout. Résiliable à tout moment.",
+    plans:[{name:"Mensuel",price:"$1.00 / mois",note:"Première semaine offerte aux nouveaux abonnés"},
+           {name:"Annuel",price:"$10.00 / an",note:"Pas d’essai gratuit"}],
+    fine:"Les prix sont indiqués en USD ; l’App Store facture l’équivalent dans votre devise locale et le montant affiché sur la page produit de l’App Store fait foi. L’abonnement se renouvelle automatiquement sauf résiliation au moins 24 heures avant la fin de la période en cours.",
+    cancel:"Résiliez à tout moment dans Réglages → Compte Apple → Abonnements. La résiliation arrête le prochain renouvellement ; la période en cours reste active jusqu’à son terme."},
+  faq:{title:"Questions fréquentes",sub:"Réponses courtes ; le guide contient les détails.",items:[{q:"Mes données sont-elles envoyées ?",a:"Non. Tout ce que vous créez reste dans une base SQLCipher chiffrée sur votre appareil. Il n’y a ni compte ni serveur de notre côté. Les seules copies qui quittent l’appareil vont dans votre propre iCloud Drive, et seulement lors d’un export ou de la sauvegarde automatique."},
+    {q:"Où sont stockées mes données de santé ?",a:"Deux parties. ① Ce que vous saisissez dans l’app (activité et calories, poids et masse grasse, température, symptômes, etc.) est écrit dans Apple Santé — dont l’essentiel provient de l’Apple Watch. ② La base chiffrée de l’app ne contient que des résumés quotidiens/horaires et l’index qui accélère les requêtes : les échantillons bruts ne sont jamais envoyés et sont exclus des sauvegardes. Quelques symptômes sans catégorie correspondante dans Apple Santé restent uniquement sur cet appareil.La synchronisation d’Apple Santé avec iCloud dépend de vos réglages système."},
+    {q:"L’IA intégrée a-t-elle besoin d’Internet ?",a:"Non. Le modèle embarqué (environ 0,8 Md de paramètres) s’exécute sur l’appareil. La transcription vocale est faite sur l’appareil quand le système le permet ; sinon, le service vocal d’Apple traite l’audio et seul le texte reconnu revient pour être analysé localement."},
+    {q:"Comment changer d’iPhone ?",a:"Les sauvegardes automatiques vont dans votre propre iCloud Drive (sans les photos ni les données de santé) et vous pouvez aussi exporter un fichier depuis Réglages → Sauvegarde. La restauration fusionne, elle ne supprime jamais."},
+    {q:"Faut-il créer un compte ?",a:"Non. Il n’y a pas de système de comptes : ouvrez l’app, la base chiffrée est créée localement."},
+    {q:"Y a-t-il de la publicité ou des SDK d’analyse tiers ?",a:"Non. Ni serveur, ni publicité, ni inscription, ni SDK d’analyse, de publicité ou de pistage tiers — uniquement les frameworks d’Apple (HealthKit, Photos, WeatherKit, MapKit, StoreKit)."},
+    {q:"Quelles langues sont prises en charge ?",a:"Anglais, chinois simplifié, chinois traditionnel, japonais, coréen, allemand, français et espagnol."},
+    {q:"Comment fonctionnent la facturation et la résiliation ?",a:"L’App Store débite votre compte Apple. La formule mensuelle commence par une semaine offerte pour les nouveaux abonnés, puis se renouvelle à $1.00 par mois ; la formule annuelle coûte $10.00 par an. Résiliable à tout moment dans Réglages → Compte Apple → Abonnements."},
+    {q:"D’où viennent la météo et les cartes ?",a:"La météo vient d’Apple Weather ; la carte du trafic, les itinéraires et les durées viennent d’Apple Maps. Seules les coordonnées ou le départ et l’arrivée utilisés sont envoyés — jamais vos données, photos ou données de santé."}]},
+  support:{title:"Assistance",body:"Questions, signalements de bugs ou idées de fonctionnalités ? Écrivez-nous : nous lisons chaque message.",
+    mail:"pigpigplan@outlook.com",linksTitle:"Mentions légales et documents",
+    guide:"Guide",terms:"Conditions et avertissement",privacy:"Confidentialité"},
+  footer:{contact:"Contact : pigpigplan@outlook.com",
+    sourcesHtml:'Données météo fournies par <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> et d’autres fournisseurs. Apple Weather est une marque d’Apple Inc.',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* ============ Español ============ */
+MKT["es"]={
+  meta:{title:"PigPigPlan — finanzas, salud y fotos: todo en tu dispositivo",
+        desc:"Una app local-first para finanzas, salud y fotos. Entrada por voz, consultas en lenguaje natural e IA en el dispositivo. Sin cuenta, sin servidor, sin rastreo."},
+  ui:{lang:"Idioma",soon:"Próximamente",notify:"Avísame cuando salga",
+      nav:{features:"Funciones",privacy:"Privacidad",pricing:"Precios",faq:"Preguntas",support:"Soporte",ai:"IA",reports:"Informes",screens:"Capturas",about:"Quiénes somos"}},
+  hero:{badge:"iPhone · iPad · Mac",
+        title:"Finanzas, salud y fotos: todo se queda en tu dispositivo.",
+        sub:"Registra un gasto hablando, pregunta a tus datos de salud y crea álbumes por voz. Una app: sin cuenta, sin servidor, sin rastreo.",
+        cta:"Próximamente",
+        ctaNote:"Aún no está en el App Store. Déjanos tu correo y te avisaremos cuando salga.",
+        aiNote:"IA integrada · en el dispositivo"},
+  modulesTitle:"Qué hace",
+  modulesSub:"Tres herramientas que comparten una base de datos cifrada en tu dispositivo.",
+  ai:{title:"La potencia de tu teléfono, escuchando tus frases.",
+    lead:"Sin nube y sin granjas de GPU. Un modelo de 0,8 mil millones de parámetros viene incluido en la app y se ejecuta en el chip Apple de tu iPhone o iPad: el mismo que mueve tus juegos y vídeos.",
+    points:[
+      "Incluido, no descargado: el modelo está dentro de la app (4 bits, ~620 MB); la primera respuesta no necesita cuenta, ajustes ni conexión.",
+      "IA en modo avión: analizar tu frase, buscar en tus álbumes y responder sobre tus datos de salud ocurre en local; ninguna petición sale del dispositivo.",
+      "Toda esa potencia es tuya: los chips móviles actuales mueven un modelo de lenguaje en la palma de la mano, sin colas, sin límite de llamadas ni factura de servidor."],
+    footnote:"La transcripción de voz se hace en el dispositivo cuando el sistema lo permite; si no, el servicio de voz de Apple procesa el audio y solo el texto reconocido se analiza localmente."},
+  demo:{label:"Incluso una frase así de larga:",items:[
+    {said:"Móvil comprado por 5999 el 12 del mes pasado, 24 plazos, 300 de canje en el último",
+     got:"Gasto 5999 · 24 plazos · 300 en el último"},
+    {said:"Desayuno 12, comida 32, taxi 18",
+     got:"3 registros por confirmar"},
+    {said:"Comparar restaurantes de este mes y el anterior",
+     got:"Tarjeta de comparación · exportar a Excel"}]},
+  reports:{title:"Pregunta una vez, recibe el informe.",
+    lead:"Las consultas no son solo filtros: tendencia, reparto, totales, desviación de presupuesto, comparación entre periodos y Top N vuelven como tarjetas, listas para leer y exportar.",
+    points:[
+      "Tendencia · reparto · total · desviación de presupuesto · comparación · Top N: lo preguntas en una frase y llega como tarjeta, sin contar filas a mano.",
+      "Excel con un toque: gráficos arriba, explicación en medio, datos abajo; se entiende aunque lo reenvíes.",
+      "Listas de suscripciones, planes de plazos y tendencias de salud se exportan igual, con los mismos campos que ves en la app.",
+      "Todo se calcula en el dispositivo; el archivo exportado va donde tú lo guardes: el dispositivo o iCloud Drive."],
+    footnote:"Los informes se generan con tus registros y estadísticas de salud del dispositivo. No hay cálculo en la nube."},
+  gallery:{title:"Capturas reales: vertical, horizontal, pantalla grande.",
+    lead:"Los mismos datos del dispositivo, capturados en iPhone Pro Max y iPhone Duo: vertical, horizontal y abierto. Ninguna imagen es un render.",
+    devices:[
+      {key:"promax",name:"iPhone Pro Max",shots:[
+        {v:"portrait",label:"Vertical"},{v:"landscape",label:"Horizontal"}]},
+      {key:"duo",name:"iPhone Duo",shots:[
+        {v:"portrait",label:"Vertical"},{v:"landscape",label:"Horizontal"},
+        {v:"open_portrait",label:"Abierto · Vertical"},{v:"open_landscape",label:"Abierto · Horizontal"}]}]},
+  modules:[
+    {key:"finance",name:"Finanzas",goal:"Objetivo: registrar y consultar con lenguaje cotidiano, y convertir la respuesta en un informe de uso general.",points:[
+      "Entrada por voz, tanto gastos como ingresos: di «comida 32» o «ingresos por suscripción de YouTube 200» y el importe, la etiqueta y la fecha se rellenan para que solo confirmes.",
+      "Pregunta con naturalidad — «¿cuánto gasté en restaurantes este mes?», «¿cuántos ingresos por suscripciones este año?» — la respuesta se calcula en el dispositivo con tus propios registros.",
+      "Suscripciones, plazos y entregas a cuenta se siguen plazo a plazo, y la exportación a Excel la inicias tú.",
+      "Las consultas vuelven como informes: tendencia, peso, totales, desviación de presupuesto, comparación entre periodos y Top N en tarjetas; un toque para Excel (gráficos arriba, notas en medio, datos abajo)."
+    ]},
+    {key:"health",name:"Salud",goal:"Objetivo: ser el compañero de datos de Apple Watch y Apple Salud: leerlo bien y volver a escribir registros.",points:[
+      "Solo lee las categorías que autorizas (entrenamientos, pasos, horas de pie, frecuencia cardíaca, VFC, respiración, sueño, temperatura corporal, oxígeno en sangre, peso y más) y calcula tendencias, extremos y medias en el dispositivo; los informes fijos están a un toque.",
+      "Entrada por voz en Apple Salud: tipo de entrenamiento y calorías quemadas, peso y grasa corporal, temperatura corporal, síntomas y más, escritos en la app Salud en cuanto confirmas.",
+      "Pregunta a tus datos de salud por voz: «¿cuántas veces he corrido este año?», «¿cuántas calorías quemé este mes?»: la respuesta se calcula en local.",
+      "Análisis de la profundidad del sueño (si duermes con un Apple Watch): temperatura, frecuencia cardíaca, respiración y otras señales de la misma franja horaria se colocan juntas, para leer la noche con más claridad.",
+      "Análisis del estrés (con Apple Watch): nivel de estrés con la fecha y la hora concretas, como referencia.",
+      "Almacenamiento: lo que registras vive en Apple Salud (la mayor parte de esa información viene del Apple Watch). La base cifrada de la app solo guarda los resúmenes estadísticos y el índice que aceleran las consultas: nunca se suben ni entran en copias de seguridad."
+    ]},
+    {key:"album",name:"Álbum",goal:"Objetivo: aprovechar el GPS y la fecha que ya traen las fotos para ordenar Fotos con más facilidad.",points:[
+      "Encuentra fotos por fecha, lugar o tipo, o di simplemente «las fotos de Seúl del año pasado». Al explorar la fototeca del sistema se lee Fotos directamente; los originales no se copian.",
+      "Crea un álbum por voz: la cuadrícula se reduce a las coincidencias y las selecciona por ti.",
+      "Las fotos añadidas a un álbum de la app conservan una copia del original (un solo archivo, sin miniaturas duplicadas, y el original de Fotos nunca se modifica); las ediciones dentro de la app solo afectan a esa copia.",
+      "Los nombres de lugar se resuelven solo con Apple Maps (solo coordenadas). La agrupación por GPS, por fecha y la búsqueda se hacen en el dispositivo; fotos y ubicaciones nunca se suben."
+    ]}
+  ],
+  modulesNote:"Los tres comparten una única base cifrada en tu dispositivo: sin servidor, sin publicidad, sin registro y sin SDK de analítica de terceros.",
+  about:{title:"Quiénes somos",lead:"Un grupo de desarrolladores con años de experiencia construyendo sistemas para compañías financieras internacionales.",paragraphs:["Somos un grupo de desarrolladores con muchos años de experiencia construyendo sistemas para compañías financieras internacionales. Nuestro deseo es crear, de forma independiente, software que mejore de verdad la vida de las personas. Tras años trabajando en sistemas financieros, hemos aprendido algo más directamente que muchos: la privacidad no es un elemento de una lista de funciones, es la base y el punto de partida de toda experiencia. Sin respeto por los datos del usuario, nada más se sostiene.","Por eso tomamos algunas decisiones que no eran fáciles. Todos los datos se cifran y se procesan solo en tu iPhone o iPad; el uso diario no necesita Internet ni token. Lo único que puede salir del dispositivo es la copia cifrada mínima que tú mismo activas, y se guarda solo en tu iCloud. Añadimos IA en el dispositivo para mejorar la entrada y las consultas, no para cambiar datos por comodidad.","Sabemos que hacer todo esto sin conexión no es sencillo y no se termina en un día. Seguimos porque queremos devolver de verdad el control de los datos al usuario. Si el resultado merece tu confianza, solo tú puedes juzgarlo, y nos encantará atender tus comentarios y mejorar."]},
+  privacy:{title:"Privacidad desde el diseño",sub:"Sin cuenta. Sin servidor. Sin rastreo.",label:"Compromiso principal",
+    body:"PigPigPlan es una aplicación local y centrada en la privacidad para la gestión de finanzas y datos personales. Todos los datos que creas en la aplicación (incluidos los datos de salud) se almacenan únicamente en tu dispositivo, nunca se suben a ningún servidor, y la exportación siempre la inicias y controlas tú. La IA integrada (entrada por voz, consultas en lenguaje natural, preguntas y respuestas de salud, búsqueda semántica) se ejecuta en un pequeño modelo incluido (unos 0,8 mil millones de parámetros), sin conexión a Internet; la transcripción de voz se realiza en el dispositivo cuando es posible y el texto reconocido nunca se sube a nuestros servidores."},
+  pricing:{title:"Precios",sub:"Una suscripción lo desbloquea todo. Cancela cuando quieras.",
+    plans:[{name:"Mensual",price:"$1.00 / mes",note:"Primera semana gratis para nuevos suscriptores"},
+           {name:"Anual",price:"$10.00 / año",note:"Sin prueba gratuita"}],
+    fine:"Los precios se muestran en USD; el App Store cobra el equivalente en tu moneda local y el importe que aparece en la página del producto en el App Store es el definitivo. La suscripción se renueva automáticamente salvo que la canceles al menos 24 horas antes de que termine el periodo actual.",
+    cancel:"Cancela cuando quieras en Ajustes → Cuenta de Apple → Suscripciones. Al cancelar se detiene la siguiente renovación y el periodo actual sigue activo hasta su fin."},
+  faq:{title:"Preguntas frecuentes",sub:"Respuestas breves; la guía tiene los detalles.",items:[{q:"¿Se suben mis datos?",a:"No. Todo lo que creas vive en una base de datos SQLCipher cifrada en tu dispositivo. No hay cuenta ni servidor nuestro. Las únicas copias que salen del dispositivo van a tu propio iCloud Drive, y solo cuando exportas o se ejecuta la copia automática."},
+    {q:"¿Dónde se guardan mis datos de salud?",a:"Dos partes. ① Lo que registras en la app (entrenamientos y calorías, peso y grasa corporal, temperatura, síntomas, etc.) se escribe en Apple Salud, y la mayor parte de lo que hay allí viene del Apple Watch. ② La base cifrada de la app solo guarda resúmenes diarios/horarios y el índice que acelera las consultas: las muestras originales nunca se suben y quedan fuera de las copias de seguridad. Algunos síntomas sin categoría correspondiente en Apple Salud se quedan solo en este dispositivo.Que Apple Salud se sincronice o no con iCloud depende de tus ajustes del sistema."},
+    {q:"¿La IA integrada necesita internet?",a:"No. El modelo incluido (unos 0,8 mil millones de parámetros) se ejecuta en el dispositivo. La transcripción de voz se hace en el dispositivo cuando el sistema lo permite; si no, el servicio de voz de Apple procesa el audio y solo el texto reconocido vuelve para analizarse localmente."},
+    {q:"¿Cómo paso a un iPhone nuevo?",a:"Las copias automáticas van a tu propio iCloud Drive (sin fotos y sin datos de salud) y también puedes exportar un archivo desde Ajustes → Copia de seguridad. Restaurar combina; nunca borra."},
+    {q:"¿Hace falta registrarse?",a:"No. No hay sistema de cuentas: abre la app y la base cifrada se crea localmente."},
+    {q:"¿Hay publicidad o SDK de analítica de terceros?",a:"No. No hay servidor, ni publicidad, ni registro, ni SDK de analítica, publicidad o rastreo de terceros: solo los frameworks de Apple (HealthKit, Photos, WeatherKit, MapKit, StoreKit)."},
+    {q:"¿Qué idiomas hay?",a:"Inglés, chino simplificado, chino tradicional, japonés, coreano, alemán, francés y español."},
+    {q:"¿Cómo funciona el cobro y la cancelación?",a:"El App Store cobra a tu cuenta de Apple. El plan mensual empieza con una semana gratis para nuevos suscriptores y luego se renueva a $1.00 al mes; el plan anual cuesta $10.00 al año. Cancela cuando quieras en Ajustes → Cuenta de Apple → Suscripciones."},
+    {q:"¿De dónde vienen el tiempo y los mapas?",a:"El tiempo viene de Apple Weather; el mapa de tráfico, las rutas y los tiempos de viaje, de Apple Maps. Solo se envían las coordenadas o el origen y el destino que estés usando, nunca tus registros, fotos o datos de salud."}]},
+  support:{title:"Soporte",body:"¿Dudas, errores o ideas de funciones? Escríbenos: leemos todos los mensajes.",
+    mail:"pigpigplan@outlook.com",linksTitle:"Legal y documentos",
+    guide:"Guía",terms:"Términos y descargo",privacy:"Privacidad"},
+  footer:{contact:"Contacto: pigpigplan@outlook.com",
+    sourcesHtml:'Datos meteorológicos de <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> y otros proveedores. Apple Weather es una marca registrada de Apple Inc.',
+    copyright:"© 2026 PigPigPlan"}
+};
+/* MKT-END */
+/* ================= 渲染（文案全部来自上面的 MKT，HTML 里不再重复一份） ================= */
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function param(k){var m=new RegExp("[?&]"+k+"=([^&#]*)").exec(location.search||"");return m?decodeURIComponent(m[1].replace(/\+/g," ")):null}
+/* 语言码归一：zh-Hans / zh-CN → zh-Hans；zh-TW / zh-HK → zh-Hant；en-US → en（与 index.html 一致） */
+function normLang(q){
+  if(!q)return null;
+  if(MKT[q])return q;
+  var s=String(q).toLowerCase();
+  if(s.indexOf("zh")===0){
+    if(s.indexOf("hant")>=0||s.indexOf("tw")>=0||s.indexOf("hk")>=0||s.indexOf("mo")>=0)return "zh-Hant";
+    return "zh-Hans";
+  }
+  var base=s.split("-")[0];
+  return MKT[base]?base:null;
+}
+/* 默认英语；只有 ?lang= 能覆盖（刻意不读 localStorage，与法务页保持一致） */
+var cur="en";
+try{var q0=normLang(param("lang")||param("l"));if(q0){cur=q0}}catch(e){}
+function shot(lang,name){return "screenshots/"+lang+"/"+name+".jpg"}
+function legalLink(tab,label){return '<a href="./legal.html?lang='+encodeURIComponent(cur)+'&amp;tab='+tab+'">'+esc(label)+'</a>'}
+function syncURL(){try{var h=location.hash||"";history.replaceState(null,"",(cur==="en"?location.pathname:"?lang="+encodeURIComponent(cur))+h)}catch(e){}}
+function draw(){
+  var d=MKT[cur]||MKT["en"];
+  document.documentElement.lang=cur;
+  document.title=d.meta.title;
+  var md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",d.meta.desc);
+  var sel=document.getElementById("langSel");
+  if(sel){
+    if(!sel.options.length){
+      sel.innerHTML=LANGS.map(function(l){return '<option value="'+l[0]+'">'+esc(l[1])+'</option>'}).join("");
+      sel.onchange=function(){var v=sel.value;if(MKT[v]){cur=v;draw();window.scrollTo(0,0)}};
+    }
+    sel.value=cur;
+    sel.setAttribute("aria-label",d.ui.lang);
+    sel.title=d.ui.lang;
+  }
+  document.getElementById("nav").innerHTML=
+    '<a href="#ai">'+esc(d.ui.nav.ai)+'</a>'+
+    '<a href="#features">'+esc(d.ui.nav.features)+'</a><a href="#reports">'+esc(d.ui.nav.reports)+'</a>'+
+    '<a href="#screens">'+esc(d.ui.nav.screens)+'</a>'+
+    '<a href="#about">'+esc(d.ui.nav.about)+'</a>'+
+    '<a href="#privacy">'+esc(d.ui.nav.privacy)+'</a>'+
+    '<a href="#pricing">'+esc(d.ui.nav.pricing)+'</a><a href="#faq">'+esc(d.ui.nav.faq)+'</a>'+
+    '<a href="#support">'+esc(d.ui.nav.support)+'</a>';
+  var cta=STORE_URL
+    ? '<a class="btn primary" href="'+esc(STORE_URL)+'" rel="noopener">'+esc(d.hero.cta)+'</a>'
+    : '<span class="btn primary" role="status" aria-disabled="true">'+esc(d.hero.cta)+'</span>';
+  var notify='<a class="btn" href="mailto:pigpigplan@outlook.com?subject='+encodeURIComponent("PigPigPlan "+d.ui.notify)+'">'+esc(d.ui.notify)+'</a>';
+  var mods=d.modules.map(function(m){
+    return '<div class="mod"><div><h3>'+esc(m.name)+'</h3>'+
+      '<p class="goal">'+esc(m.goal)+'</p><ul>'+
+      m.points.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ul></div>'+
+      '<figure class="shot"><img src="'+esc(shot(cur,m.key+"-home"))+'" alt="'+esc(m.name)+'" loading="lazy" decoding="async"></figure></div>';
+  }).join("");
+  var plans=d.pricing.plans.map(function(p){
+    return '<div class="plan"><h3>'+esc(p.name)+'</h3><p class="price">'+esc(p.price)+'</p><p class="note">'+esc(p.note)+'</p></div>';
+  }).join("");
+  var faq=d.faq.items.map(function(it){
+    return '<details><summary>'+esc(it.q)+'</summary><p>'+esc(it.a)+'</p></details>';
+  }).join("");
+  var foot='<footer><div class="frow"><span>'+esc(d.footer.copyright)+' · '+esc(d.footer.contact)+'</span></div>'+
+    '<div class="src">'+d.footer.sourcesHtml+'</div></footer>';
+  var aiDemo='<div class="demo"><b>'+esc(d.demo.label)+'</b>'+
+    d.demo.items.map(function(it){
+      return '<div class="ditem"><p class="said">“'+esc(it.said)+'”</p><p class="got">→ '+esc(it.got)+'</p></div>';
+    }).join("")+'</div>';
+  var aiBand='<div class="aiband" id="ai"><h2>'+esc(d.ai.title)+'</h2>'+
+    '<p class="lead" style="margin:0">'+esc(d.ai.lead)+'</p>'+
+    '<ol>'+d.ai.points.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ol>'+
+    aiDemo+
+    '<p class="fine">'+esc(d.ai.footnote)+'</p></div>';
+  var galleryBand='<section id="screens"><h2>'+esc(d.gallery.title)+'</h2><p class="sub">'+esc(d.gallery.lead)+'</p>'+
+    d.gallery.devices.map(function(dev){
+      return '<div class="dev"><h3>'+esc(dev.name)+'</h3><div class="strip">'+
+        dev.shots.map(function(s){
+          var wide=(s.v.indexOf("landscape")>=0);
+          var src="screenshots/devices/"+cur+"/iphone_"+dev.key+"_"+s.v+".jpg";
+          return '<figure class="shot'+(wide?" wide":"")+'"><img src="'+esc(src)+'" alt="'+esc(dev.name+" · "+s.label)+'" loading="lazy" decoding="async">'+
+            '<figcaption>'+esc(s.label)+'</figcaption></figure>';
+        }).join("")+'</div></div>';
+    }).join("")+'</section>';
+  var reportsBand='<section id="reports"><h2>'+esc(d.reports.title)+'</h2>'+
+    '<p class="sub">'+esc(d.reports.lead)+'</p>'+
+    '<ol class="rlist">'+d.reports.points.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ol>'+
+    '<p class="fine">'+esc(d.reports.footnote)+'</p></section>';
+  var aboutBand='<section id="about"><h2>'+esc(d.about.title)+'</h2><p class="sub">'+esc(d.about.lead)+'</p>'+
+    d.about.paragraphs.map(function(p){return '<p class="aboutp">'+esc(p)+'</p>'}).join("")+'</section>';
+  document.getElementById("app").innerHTML=
+    '<section class="hero"><div>'+
+      '<span class="badge">'+esc(d.hero.badge)+'</span>'+
+      '<span class="badge ai" style="margin-left:8px">'+esc(d.hero.aiNote)+'</span>'+
+      '<h1>'+esc(d.hero.title)+'</h1>'+
+      '<p class="lead">'+esc(d.hero.sub)+'</p>'+
+      '<div class="cta">'+cta+notify+'</div>'+
+      '<p class="soon">'+esc(d.hero.ctaNote)+'</p>'+
+    '</div><figure class="shot"><img src="'+esc(shot(cur,"cover"))+'" alt="PigPigPlan" decoding="async"></figure></section>'+aiBand+
+    '<section id="features"><h2>'+esc(d.modulesTitle)+'</h2><p class="sub">'+esc(d.modulesSub)+'</p>'+mods+
+      '<p class="modnote">'+esc(d.modulesNote)+'</p></section>'+reportsBand+galleryBand+aboutBand+
+    '<section id="privacy"><h2>'+esc(d.privacy.title)+'</h2><p class="sub">'+esc(d.privacy.sub)+'</p>'+
+      '<div class="callout"><strong>'+esc(d.privacy.label)+'</strong>'+esc(d.privacy.body)+'</div></section>'+
+    '<section id="pricing"><h2>'+esc(d.pricing.title)+'</h2><p class="sub">'+esc(d.pricing.sub)+'</p>'+
+      '<div class="plans">'+plans+'</div><p class="fine">'+esc(d.pricing.fine)+'</p><p class="fine">'+esc(d.pricing.cancel)+'</p></section>'+
+    '<section id="faq"><h2>'+esc(d.faq.title)+'</h2><p class="sub">'+esc(d.faq.sub)+'</p>'+faq+'</section>'+
+    '<section id="support" class="support"><div><h2>'+esc(d.support.title)+'</h2>'+
+      '<p>'+esc(d.support.body)+'</p>'+
+      '<p><a class="btn primary" href="mailto:'+esc(d.support.mail)+'?subject='+encodeURIComponent("PigPigPlan")+'">'+esc(d.support.mail)+'</a></p></div>'+
+      '<div class="links"><b>'+esc(d.support.linksTitle)+'</b>'+
+      legalLink("privacy",d.support.privacy)+legalLink("guide",d.support.guide)+legalLink("terms",d.support.terms)+
+      '</div></section>'+foot;
+  syncURL();
+  if(location.hash){
+    var t=document.getElementById(location.hash.slice(1));
+    if(t)t.scrollIntoView();
+  }
+}
+window.addEventListener("DOMContentLoaded",draw);
+</script>
+</body>
+</html>
