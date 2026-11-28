@@ -72,65 +72,65 @@ node scripts/check_marketing_i18n.mjs   # 会逐个断言这 48 个文件存在
 - ⚠️ `de/` 目录源文件名有个笔误：`iphone_duo_opne_landscape.png`（opne）。脚本已内置兜底，**不要**手改源目录。
 - 截图里不能出现真实姓名、地址、状态栏通知等隐私信息。
 
-## 每个语言需要放的 13 个文件
+## 每个语言需要放的 14 个文件
 
 ### `screenshots/en/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/zh-Hans/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/zh-Hant/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/ja/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/ko/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/de/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/fr/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
 ### `screenshots/es/`
 ```text
-finance-home.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
+finance-home.jpg    finance-home-2.jpg    finance-entry.jpg    finance-entry-2.jpg    finance-query.jpg    finance-query-2.jpg
 health-home.jpg     health-entry.jpg     health-entry-2.jpg     health-query.jpg     health-query-2.jpg
 album-home.jpg      album-entry.jpg      album-query.jpg
 ```
 
-合计：**8 语言 × 13 张 = 104 张**（财务 5 + 健康 5 + 相册 3）；封面按需再放 `cover.jpg`（1–8 张），最多 112 张。
+合计：**8 语言 × 14 张 = 112 张**（财务 6 + 健康 5 + 相册 3）；封面按需再放 `cover.jpg`（1–8 张），最多 120 张。
 
 ## 截图建议
 

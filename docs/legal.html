@@ -1367,24 +1367,24 @@ function el(id){return document.getElementById(id)}
 // 内容回到顶部（头部固定，只有 #scroll 在滚）
 function resetScroll(){var s=el("scroll");if(s)s.scrollTop=0}
 /* 功能截图：路径固定为 screenshots/<语言>/<模块>-<视图>.jpg；封面单独一张 screenshots/<语言>/cover.jpg
-   模块：finance / health / album；视图：home / entry / entry-2 / query / query-2（财务、健康有 entry-2 / query-2）
+   模块：finance / health / album；视图：home / home-2 / entry / entry-2 / query / query-2（财务有 home-2 / entry-2 / query-2，健康有 entry-2 / query-2）
    封面：插在「1. 首次启动」小节；该语言目录没有 cover.jpg 时自动回退 screenshots/cover.jpg（通用单图）
    截图未放好时由 onerror 显示预留路径，放好同名 JPG 即自动出现。 */
 var SHOT_COPY={
-  "en":{cover:"Cover",finance:"Finance",health:"Health",album:"Album",home:"Home",entry:"Add / entry",entry2:"Add / entry 2",query:"Search / results",query2:"Search / results 2"},
-  "zh-Hans":{cover:"封面",finance:"财务",health:"健康",album:"相册",home:"主页",entry:"录入",entry2:"录入 2",query:"查询",query2:"查询 2"},
-  "zh-Hant":{cover:"封面",finance:"財務",health:"健康",album:"相簿",home:"主頁",entry:"錄入",entry2:"錄入 2",query:"查詢",query2:"查詢 2"},
-  "ja":{cover:"カバー",finance:"家計",health:"健康",album:"アルバム",home:"ホーム",entry:"入力",entry2:"入力 2",query:"検索",query2:"検索 2"},
-  "ko":{cover:"커버",finance:"가계부",health:"건강",album:"앨범",home:"홈",entry:"입력",entry2:"입력 2",query:"조회",query2:"조회 2"},
-  "de":{cover:"Startseite",finance:"Finanzen",health:"Gesundheit",album:"Album",home:"Start",entry:"Eingabe",entry2:"Eingabe 2",query:"Abfrage",query2:"Abfrage 2"},
-  "fr":{cover:"Accueil",finance:"Finances",health:"Santé",album:"Album",home:"Accueil",entry:"Saisie",entry2:"Saisie 2",query:"Recherche",query2:"Recherche 2"},
-  "es":{cover:"Portada",finance:"Finanzas",health:"Salud",album:"Álbum",home:"Inicio",entry:"Entrada",entry2:"Entrada 2",query:"Consulta",query2:"Consulta 2"}
+  "en":{cover:"Cover",finance:"Finance",health:"Health",album:"Album",home:"Home",home2:"Home 2",entry:"Add / entry",entry2:"Add / entry 2",query:"Search / results",query2:"Search / results 2"},
+  "zh-Hans":{cover:"封面",finance:"财务",health:"健康",album:"相册",home:"主页",home2:"主页 2",entry:"录入",entry2:"录入 2",query:"查询",query2:"查询 2"},
+  "zh-Hant":{cover:"封面",finance:"財務",health:"健康",album:"相簿",home:"主頁",home2:"主頁 2",entry:"錄入",entry2:"錄入 2",query:"查詢",query2:"查詢 2"},
+  "ja":{cover:"カバー",finance:"家計",health:"健康",album:"アルバム",home:"ホーム",home2:"ホーム 2",entry:"入力",entry2:"入力 2",query:"検索",query2:"検索 2"},
+  "ko":{cover:"커버",finance:"가계부",health:"건강",album:"앨범",home:"홈",home2:"홈 2",entry:"입력",entry2:"입력 2",query:"조회",query2:"조회 2"},
+  "de":{cover:"Startseite",finance:"Finanzen",health:"Gesundheit",album:"Album",home:"Start",home2:"Start 2",entry:"Eingabe",entry2:"Eingabe 2",query:"Abfrage",query2:"Abfrage 2"},
+  "fr":{cover:"Accueil",finance:"Finances",health:"Santé",album:"Album",home:"Accueil",home2:"Accueil 2",entry:"Saisie",entry2:"Saisie 2",query:"Recherche",query2:"Recherche 2"},
+  "es":{cover:"Portada",finance:"Finanzas",health:"Salud",album:"Álbum",home:"Inicio",home2:"Inicio 2",entry:"Entrada",entry2:"Entrada 2",query:"Consulta",query2:"Consulta 2"}
 };
 function addGuideShots(lang){
   var host=el("doc");if(!host)return;
   var copy=SHOT_COPY[lang]||SHOT_COPY["en"];
   var sections={"1":"cover","3":"finance","4":"health","5":"album"};
-  var viewsByModule={cover:["cover"],finance:["home","entry","entry-2","query","query-2"],health:["home","entry","entry-2","query","query-2"],album:["home","entry","query"]};
+  var viewsByModule={cover:["cover"],finance:["home","home-2","entry","entry-2","query","query-2"],health:["home","entry","entry-2","query","query-2"],album:["home","entry","query"]};
   Array.prototype.forEach.call(host.querySelectorAll("h3"),function(h){
     var m=/^\s*([0-9]+)\./.exec(h.textContent||"");if(!m)return;
     var key=sections[m[1]];if(!key)return;
@@ -1400,7 +1400,7 @@ function addGuideShots(lang){
     wrap.innerHTML=views.map(function(view){
       // 封面只有一张：screenshots/<lang>/cover.jpg；该语言目录没放图时回退到通用的 screenshots/cover.jpg
       var base=isCover?("screenshots/"+lang+"/cover.jpg"):("screenshots/"+lang+"/"+key+"-"+view+".jpg");
-      var labelKey=(view==="entry-2")?"entry2":(view==="query-2")?"query2":view;
+      var labelKey=(view==="entry-2")?"entry2":(view==="query-2")?"query2":(view==="home-2")?"home2":view;
       // 相册的 entry 截图实际也是「找照片」查询界面，文案统一显示为「查询」，避免误导
       if(key==="album"&&view==="entry")labelKey="query";
       var caption=isCover?copy.cover:(copy[key]+" · "+copy[labelKey]);

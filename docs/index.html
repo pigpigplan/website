@@ -53,6 +53,13 @@ h2{font-size:26px;margin:0 0 6px}
 .mod{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:26px;align-items:start;padding:22px 0;border-top:1px dashed var(--line)}
 .mod:first-of-type{border-top:0;padding-top:4px}
 @media(max-width:640px){.mod{grid-template-columns:1fr;gap:14px}}
+/* 财务模块多一张主界面图（总览 + 隐藏收入）：桌面并排 220px×2，窄屏收成一张宽图 */
+.modshots{display:grid;gap:10px;align-content:start}
+.mod.dual{grid-template-columns:minmax(0,1fr) 448px}
+.mod.dual .modshots{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:900px){.mod.dual{grid-template-columns:minmax(0,1fr) 220px}.mod.dual .modshots{grid-template-columns:1fr}}
+@media(max-width:640px){.mod.dual{grid-template-columns:1fr}.mod.dual .modshots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.mod.dual .modshots{grid-template-columns:1fr}}
 .mod h3{margin:0 0 8px;font-size:19px}
 .mod ul{margin:0;padding-left:20px}
 .mod li{margin:.35em 0}
@@ -134,7 +141,7 @@ var MKT={};
 MKT["en"]={
   meta:{title:"PigPigPlan — money, health and photos, all on your device",
         desc:"A local-first app for finance, health and photos. Voice entry, natural-language queries and on-device AI. No account, no server, no tracking."},
-  ui:{lang:"Language",soon:"Coming soon",notify:"Email me when it’s out",
+  ui:{lang:"Language",soon:"Coming soon",notify:"Email me when it’s out",shotSecondary:"Income hidden · privacy mode",
       nav:{features:"Features",privacy:"Privacy",pricing:"Pricing",faq:"FAQ",support:"Support",ai:"AI",reports:"Reports",screens:"Screenshots",about:"About"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"Money, health and photos — all on your device.",
@@ -225,7 +232,7 @@ MKT["en"]={
 MKT["zh-Hans"]={
   meta:{title:"PigPigPlan——记账、健康、相册，全部留在你的设备上",
         desc:"本地优先的记账、健康与相册应用：语音录入、自然语言查询、端侧 AI。无账号、无服务器、无追踪。"},
-  ui:{lang:"语言",soon:"即将上线",notify:"上线时通知我",
+  ui:{lang:"语言",soon:"即将上线",notify:"上线时通知我",shotSecondary:"隐藏收入 · 隐私模式",
       nav:{features:"功能",privacy:"隐私",pricing:"价格",faq:"常见问题",support:"支持",ai:"AI",reports:"报表",screens:"截图",about:"关于"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"记账、健康、相册——全部留在你的设备上。",
@@ -316,7 +323,7 @@ MKT["zh-Hans"]={
 MKT["zh-Hant"]={
   meta:{title:"PigPigPlan——記帳、健康、相簿，全部留在你的裝置上",
         desc:"本地優先的記帳、健康與相簿應用：語音輸入、自然語言查詢、裝置端 AI。無帳號、無伺服器、無追蹤。"},
-  ui:{lang:"語言",soon:"即將上線",notify:"上線時通知我",
+  ui:{lang:"語言",soon:"即將上線",notify:"上線時通知我",shotSecondary:"隱藏收入 · 隱私模式",
       nav:{features:"功能",privacy:"隱私",pricing:"價格",faq:"常見問題",support:"支援",ai:"AI",reports:"報表",screens:"截圖",about:"關於"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"記帳、健康、相簿——全部留在你的裝置上。",
@@ -407,7 +414,7 @@ MKT["zh-Hant"]={
 MKT["ja"]={
   meta:{title:"PigPigPlan — 家計・健康・アルバム、すべて端末の中に",
         desc:"ローカル優先の家計簿・健康・アルバムアプリ。音声入力、自然言語クエリ、端末内 AI。アカウント不要、サーバーなし、トラッキングなし。"},
-  ui:{lang:"言語",soon:"近日公開",notify:"公開時に通知を受け取る",
+  ui:{lang:"言語",soon:"近日公開",notify:"公開時に通知を受け取る",shotSecondary:"収入を非表示・プライバシーモード",
       nav:{features:"機能",privacy:"プライバシー",pricing:"料金",faq:"よくある質問",support:"サポート",ai:"AI",reports:"レポート",screens:"画面",about:"開発者について"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"家計・健康・アルバム。すべて端末の中に。",
@@ -498,7 +505,7 @@ MKT["ja"]={
 MKT["ko"]={
   meta:{title:"PigPigPlan — 가계부·건강·앨범, 모두 기기 안에",
         desc:"로컬 우선 가계부·건강·앨범 앱. 음성 입력, 자연어 쿼리, 기기 내 AI. 계정 없음, 서버 없음, 추적 없음."},
-  ui:{lang:"언어",soon:"출시 예정",notify:"출시되면 알려 주세요",
+  ui:{lang:"언어",soon:"출시 예정",notify:"출시되면 알려 주세요",shotSecondary:"수입 숨김 · 프라이버시 모드",
       nav:{features:"기능",privacy:"개인정보",pricing:"요금",faq:"자주 묻는 질문",support:"지원",ai:"AI",reports:"리포트",screens:"화면",about:"만든 사람"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"가계부·건강·앨범, 모두 기기 안에.",
@@ -589,7 +596,7 @@ MKT["ko"]={
 MKT["de"]={
   meta:{title:"PigPigPlan — Finanzen, Gesundheit, Fotos: alles auf Ihrem Gerät",
         desc:"Eine Local-First-App für Finanzen, Gesundheit und Fotos. Spracheingabe, natürlichsprachige Abfragen, KI auf dem Gerät. Kein Konto, kein Server, kein Tracking."},
-  ui:{lang:"Sprache",soon:"Bald verfügbar",notify:"E-Mail, wenn es erscheint",
+  ui:{lang:"Sprache",soon:"Bald verfügbar",notify:"E-Mail, wenn es erscheint",shotSecondary:"Einnahmen ausgeblendet · Privatmodus",
       nav:{features:"Funktionen",privacy:"Datenschutz",pricing:"Preis",faq:"FAQ",support:"Support",ai:"KI",reports:"Berichte",screens:"Screenshots",about:"Über uns"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"Finanzen, Gesundheit, Fotos – alles bleibt auf Ihrem Gerät.",
@@ -680,7 +687,7 @@ MKT["de"]={
 MKT["fr"]={
   meta:{title:"PigPigPlan — finances, santé, photos : tout reste sur votre appareil",
         desc:"Une app local-first pour les finances, la santé et les photos. Saisie vocale, requêtes en langage naturel, IA sur l’appareil. Sans compte, sans serveur, sans pistage."},
-  ui:{lang:"Langue",soon:"Bientôt disponible",notify:"Prévenez-moi au lancement",
+  ui:{lang:"Langue",soon:"Bientôt disponible",notify:"Prévenez-moi au lancement",shotSecondary:"Revenus masqués · mode privé",
       nav:{features:"Fonctionnalités",privacy:"Confidentialité",pricing:"Tarifs",faq:"FAQ",support:"Assistance",ai:"IA",reports:"Rapports",screens:"Captures",about:"À propos"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"Finances, santé, photos – tout reste sur votre appareil.",
@@ -771,7 +778,7 @@ MKT["fr"]={
 MKT["es"]={
   meta:{title:"PigPigPlan — finanzas, salud y fotos: todo en tu dispositivo",
         desc:"Una app local-first para finanzas, salud y fotos. Entrada por voz, consultas en lenguaje natural e IA en el dispositivo. Sin cuenta, sin servidor, sin rastreo."},
-  ui:{lang:"Idioma",soon:"Próximamente",notify:"Avísame cuando salga",
+  ui:{lang:"Idioma",soon:"Próximamente",notify:"Avísame cuando salga",shotSecondary:"Ingresos ocultos · modo privado",
       nav:{features:"Funciones",privacy:"Privacidad",pricing:"Precios",faq:"Preguntas",support:"Soporte",ai:"IA",reports:"Informes",screens:"Capturas",about:"Quiénes somos"}},
   hero:{badge:"iPhone · iPad · Mac",
         title:"Finanzas, salud y fotos: todo se queda en tu dispositivo.",
@@ -908,10 +915,16 @@ function draw(){
     : '<span class="btn primary" role="status" aria-disabled="true">'+esc(d.hero.cta)+'</span>';
   var notify='<a class="btn" href="mailto:pigpigplan@outlook.com?subject='+encodeURIComponent("PigPigPlan "+d.ui.notify)+'">'+esc(d.ui.notify)+'</a>';
   var mods=d.modules.map(function(m){
-    return '<div class="mod"><div><h3>'+esc(m.name)+'</h3>'+
+    // 财务模块主界面放两张：总览 + 隐藏收入（隐私模式）；健康/相册仍一张
+    var views=(m.key==="finance")?["home","home-2"]:["home"];
+    var figs=views.map(function(v,i){
+      var alt=(i===0)?m.name:(m.name+" · "+(d.ui.shotSecondary||""));
+      return '<figure class="shot"><img src="'+esc(shot(cur,m.key+"-"+v))+'" alt="'+esc(alt)+'" loading="lazy" decoding="async"></figure>';
+    }).join("");
+    return '<div class="mod'+(views.length>1?" dual":"")+'"><div><h3>'+esc(m.name)+'</h3>'+
       '<p class="goal">'+esc(m.goal)+'</p><ul>'+
       m.points.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ul></div>'+
-      '<figure class="shot"><img src="'+esc(shot(cur,m.key+"-home"))+'" alt="'+esc(m.name)+'" loading="lazy" decoding="async"></figure></div>';
+      '<div class="modshots">'+figs+'</div></div>';
   }).join("");
   var plans=d.pricing.plans.map(function(p){
     return '<div class="plan"><h3>'+esc(p.name)+'</h3><p class="price">'+esc(p.price)+'</p><p class="note">'+esc(p.note)+'</p></div>';
